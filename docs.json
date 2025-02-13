@@ -11,6 +11,10 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "OpenAPI Generated",
+        "openapi": "openapi1.json"
+      },
+      {
         "tab": "Guides",
         "groups": [
           {
