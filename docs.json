@@ -12,7 +12,7 @@
     "tabs": [
       {
         "tab": "OpenAPI Generated1",
-        "openapi": "http://180.76.239.218:8000/openapi.json"
+        "openapi": "api-reference/openapi1.json"
       },
       {
         "tab": "Guides1",
