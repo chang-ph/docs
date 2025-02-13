@@ -12,7 +12,7 @@
     "tabs": [
       {
         "tab": "OpenAPI Generated",
-        "openapi": "openapi1.json"
+        "openapi": "api-reference/openapi1.json"
       },
       {
         "tab": "Guides1",
