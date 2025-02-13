@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "OpenAPI Generated",
+        "tab": "OpenAPI Generated1",
         "openapi": "http://180.76.239.218:8000/openapi.json"
       },
       {
