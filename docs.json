@@ -27,7 +27,7 @@
       },
       {
         "tab": "API Reference",
-        "grousp": [
+        "groups": [
           {
             "group": "DEV",
             "openapi": "api-reference/dev-openapi.json"
