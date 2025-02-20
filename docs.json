@@ -27,7 +27,8 @@
       },
       {
         "tab": "API Reference",
-        "openapi": "api-reference/dev-openapi.json"
+        "openapi": "api-reference/dev-openapi.json",
+        "hidden": true
       },
       {
         "tab": "Coinfer.jl",
