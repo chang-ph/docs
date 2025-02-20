@@ -19,18 +19,14 @@
       {
         "tab": "Coinfer Cloud",
         "pages": [
+          {
+            "Group": "Server API(1)",
+            "openapi": "abc/prod-openapi.json"
+          },
           "essentials/ws-api",
           "essentials/proxylambda",
           "essentials/samle-data-handling"
         ]
-      },
-      {
-        "tab": "Server API(1)",
-        "openapi": "abc/prod-openapi.json"
-      },
-      {
-        "tab": "Server API(2)",
-        "openapi": "abc/dev-openapi.json"
       },
       {
         "tab": "Coinfer.jl",
