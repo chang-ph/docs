@@ -25,8 +25,8 @@
         ]
       },
       {
-        "tab": "Server API(1)",
-        "openapi": "abc/prod-openapi.json"
+        "tab": "Server API",
+        "openapi": "abc/openapi.json"
       },
       {
         "tab": "Coinfer.jl",
