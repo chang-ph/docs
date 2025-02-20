@@ -18,7 +18,6 @@
       },
       {
         "tab": "Coinfer Cloud",
-        "openapi": "api-reference/prod-openapi.json",
         "pages": [
           "essentials/ws-api",
           "essentials/proxylambda",
