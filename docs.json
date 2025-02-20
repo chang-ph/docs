@@ -27,16 +27,7 @@
       },
       {
         "tab": "API Reference",
-        "groups": [
-          {
-            "group": "DEV",
-            "openapi": "api-reference/dev-openapi.json"
-          },
-          {
-            "group": "PROD",
-            "openapi": "api-reference/prod-openapi.json"
-          }
-        ]
+        "openapi": "api-reference/dev-openapi.json"
       },
       {
         "tab": "Coinfer.jl",
