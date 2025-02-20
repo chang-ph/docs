@@ -20,8 +20,66 @@
         "tab": "Coinfer Cloud",
         "pages": [
           {
-            "group": "Server API(1)",
-            "openapi": "abc/prod-openapi.json"
+            "groups": [
+              {
+                "group": "Authorization",
+                "pages": [
+                  "serverapi/authorization/get-auth0-login-configurationdev",
+                  "serverapi/authorization/login-with-auth0development",
+                  "serverapi/authorization/login-with-password",
+                  "serverapi/authorization/get-information-of-current-user",
+                  "serverapi/authorization/update-information-of-current-user",
+                  "serverapi/authorization/logout-the-system",
+                  "serverapi/authorization/list-all-of-current-users-tokens",
+                  "serverapi/authorization/create-a-new-authorization-token",
+                  "serverapi/authorization/update-a-token-by-its-id",
+                  "serverapi/authorization/delete-a-token-by-its-id"
+                ]
+              },
+              {
+                "group": "Other",
+                "pages": [
+                  "serverapi/other/get-changelogs-of-coinfer"
+                ]
+              },
+              {
+                "group": "Model",
+                "pages": [
+                  "serverapi/model/list-models",
+                  "serverapi/model/create-a-new-model",
+                  "serverapi/model/delete-models-in-batch",
+                  "serverapi/model/view-a-model-by-its-id",
+                  "serverapi/model/update-a-model-by-its-id",
+                  "serverapi/model/view-share-snapshot-of-a-model",
+                  "serverapi/model/get-configuration-about-how-to-run-a-model"
+                ]
+              },
+              {
+                "group": "Share",
+                "pages": [
+                  "serverapi/share/share-a-model-specified-by-model-id",
+                  "serverapi/share/get-basic-share-information-of-a-model-sharing",
+                  "serverapi/share/delete-model-shares",
+                  "serverapi/share/share-an-experiment",
+                  "serverapi/share/get-sharing-information-of-an-experiment",
+                  "serverapi/share/delete-experiment-shares"
+                ]
+              },
+              {
+                "group": "Experiment",
+                "pages": [
+                  "serverapi/experiment/list-experiments-or-data",
+                  "serverapi/experiment/create-an-experiment",
+                  "serverapi/experiment/delete-experiments-in-batch",
+                  "serverapi/experiment/view-an-experiment-by-its-id",
+                  "serverapi/experiment/update-an-experiment-by-its-id",
+                  "serverapi/experiment/view-a-data-object-by-its-id",
+                  "serverapi/experiment/update-a-data-object-by-its-id",
+                  "serverapi/experiment/delete-a-data-object-by-its-id",
+                  "serverapi/experiment/get-cloudwatch-logs"
+                ]
+              }
+            ]
           },
           "essentials/ws-api",
           "essentials/proxylambda",
