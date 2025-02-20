@@ -26,11 +26,11 @@
       },
       {
         "tab": "Server API(1)",
-        "openapi": "prod-openapi.json"
+        "openapi": "abc/prod-openapi.json"
       },
       {
         "tab": "Server API(2)",
-        "openapi": "dev-openapi.json"
+        "openapi": "abc/dev-openapi.json"
       },
       {
         "tab": "Coinfer.jl",
