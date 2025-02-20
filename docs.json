@@ -26,6 +26,19 @@
         ]
       },
       {
+        "tab": "API Reference",
+        "grousp": [
+          {
+            "group": "DEV",
+            "openapi": "api-reference/dev-openapi.json"
+          },
+          {
+            "group": "PROD",
+            "openapi": "api-reference/prod-openapi.json"
+          }
+        ]
+      },
+      {
         "tab": "Coinfer.jl",
         "href": "https://coinfer.ai/coinfer-docs"
       },
