@@ -11,13 +11,36 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "API Reference",
-        "openapi": "api-reference/openapi.json"
+        "tab": "Getting started",
+        "pages": [
+          "essentials/quickstart"
+        ]
+      },
+      {
+        "tab": "Coinfer Cloud",
+        "openapi": "api-reference/prod-openapi.json",
+        "pages": [
+          "essentials/ws-api",
+          "essentials/proxylambda",
+          "essentials/samle-data-handling"
+        ]
+      },
+      {
+        "tab": "Coinfer.jl",
+        "href": "https://coinfer.ai/coinfer-docs"
+      },
+      {
+        "tab": "Coinfer.js",
+        "groups": [
+          {
+            "group": "Place Holder",
+            "pages": []
+          }
+        ]
       }
     ],
     "global": {
-      "anchors": [
-      ]
+      "anchors": []
     }
   },
   "navbar": {},
