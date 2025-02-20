@@ -20,7 +20,7 @@
         "tab": "Coinfer Cloud",
         "pages": [
           {
-            "Group": "Server API(1)",
+            "group": "Server API(1)",
             "openapi": "abc/prod-openapi.json"
           },
           "essentials/ws-api",
