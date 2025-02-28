@@ -1,0 +1,351 @@
+---
+title: "Reference"
+---
+
+## ServerlessBayes
+
+Coinfer.ServerlessBayes.AnonymousCloudFunction 
+
+
+
+```julia
+struct AnonymousCloudFunction
+```
+
+
+Contains data used when running model in cloud. New models won&#39;t be saved in the server.
+- `project_dir::String`: The directory which contains the project source code and data. Default:
+  
+- `entrance_file::String`: The file which defines the required `model` function. Default: main.jl
+  
+- `entrance_func::String`: The name of the function to run. Default: main
+  
+- `project_file::String`: The julia project file. Default: Project.toml
+  
+- `manifest_file::String`: The julia project manifest file. Default: Manifest.toml
+  
+- `endpoint::Coinfer.ServerlessBayes.Endpoints`: Endpoints configuration Default: Endpoints()
+  
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L240)
+
+
+
+
+Coinfer.ServerlessBayes.CloudFunction 
+
+
+
+```julia
+struct CloudFunction <: Coinfer.ServerlessBayes.CloudData
+```
+
+
+Contains data used when running model in cloud. New models will be saved in the server.
+- `model_id::String`: Model ID Default:
+  
+- `project_dir::String`: The directory which contains the project source code and data. Default:
+  
+- `entrance_file::String`: The file which defines the required `model` function. Default: main.jl
+  
+- `entrance_func::String`: The name of the function to run. Default: main
+  
+- `project_file::String`: The julia project file. Default: Project.toml
+  
+- `manifest_file::String`: The julia project manifest file. Default: Manifest.toml
+  
+- `endpoint::Coinfer.ServerlessBayes.Endpoints`: Endpoints configuration Default: Endpoints()
+  
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L197)
+
+
+
+
+Coinfer.ServerlessBayes.Endpoints 
+
+
+
+A struct holding the endpoints configuration of Coinfer.
+
+```julia
+struct Endpoints
+```
+
+
+There are three endpoints which may be same or not:
+- `base::String`: endpoints of base APIs.
+  
+- `mcmc::String`: endpoints of mcmc APIs.
+  
+- `turing::String`: endpoints of turing APIs.
+  
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L108-L114)
+
+
+
+
+Coinfer.ServerlessBayes.Endpoints 
+
+
+
+Construct an endpoint object with all API endpoints set to the same `common_value`
+
+```julia
+Endpoints(common_value)
+
+```
+
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L124-L128)
+
+
+
+
+Coinfer.ServerlessBayes.LocalFunction 
+
+
+
+```julia
+struct LocalFunction
+```
+
+
+Contains data used when running model locally.
+- `model_id::String`: Model ID Default:
+  
+- `project_dir::String`: The directory which contains the project source code and data. Default:
+  
+- `entrance_file::String`: The file which defines the required `model` function. Default: main.jl
+  
+- `entrance_func::String`: The name of the function to run. Default: main
+  
+- `project_file::String`: The julia project file. Default: Project.toml
+  
+- `manifest_file::String`: The julia project manifest file. Default: Manifest.toml
+  
+- `endpoint::Coinfer.ServerlessBayes.Endpoints`: Endpoints configuration Default: Endpoints()
+  
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L144)
+
+
+
+
+Coinfer.ServerlessBayes.evaluate 
+
+
+
+run any function locally or remotely
+
+```julia
+evaluate(func; args, kwargs, executor, other_kwargs...)
+
+```
+
+- _func_:: the config used to locate the function
+  
+- _args_:: the args used to invoke the function
+  
+- _kwargs_:: the keyword args used to invoke the function
+  
+- _sample_args_:: if the function returns a model, then you may provide additional args for sampling
+  
+- _sample_kwargs_:: if the function returns a model, then you may provide additional keyword args for sampling
+  
+
+**Example**
+
+[run code](examples/run_code.jl)
+
+Only simple arguments that can be serialized and deserialized using JSON directly should be passed in entrance_args and entrance_kwargs. For complex arguments, you need to convert them to simple forms before calling evaluate. In your entrance_func, you will then need to convert them back to their original complex forms.
+
+The return value of the entrance_func will be printed to stdout when executed locally, or it will be sent to the experiment logs when run remotely. It is essential to ensure that the return value contains only simple data structures that can be serialized using JSON.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L1090-L1108)
+
+
+
+
+Coinfer.ServerlessBayes.sample 
+
+
+
+Run sample on specified model which generate multiple chains.
+
+```julia
+sample(rng, model, N; ...)
+sample(rng, model, N, parallel; ...)
+sample(
+    rng,
+    model,
+    N,
+    parallel,
+    nchains;
+    use_script,
+    experiment_id,
+    executor,
+    sample_kwargs...
+)
+
+```
+
+- rng::StableRNG. The random number generator. Currently only StableRNG is supported.
+  
+- model::LocalFunction|CloudFunction|AnonymousCloudFunction. The model meta info.
+  
+- parallel::MCMCThreads|MCMCDistributed|MCMCSerial. The algorithm for sampling MCMC chains.
+  
+- N::Int. iteration count.
+  
+- nchains::Int. Number of chains.
+  
+- use_script::Bool. whether to use the script mode or not. In script there will be a script file generated from the parameters of this function and this script will be run in the server side.
+  
+- experiment_id::String. The experiment id.
+  
+- executor::String. The executor to use: fargate|lambda.
+  
+
+**Example**
+- [run model](examples/run_model.jl)
+  
+- [run model multichain](examples/run_model_multichain.jl)
+  
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/ServerlessBayes.jl#L790-L809)
+
+
+
+
+## CoinferLogger
+
+Coinfer.CoinferLogger.Experiment 
+
+
+
+```julia
+Experiment
+```
+
+
+Select experiment on the server. Generally, an experiment is created by calling `create_experiment` rather than constructed explicitly.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L35-L39)
+
+
+
+
+Coinfer.CoinferLogger.Logger 
+
+
+
+```julia
+Logger
+```
+
+
+Withdata&#39;s Logger, which sends sample data onto the server.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L45-L49)
+
+
+
+
+Coinfer.CoinferLogger.Server 
+
+
+
+```julia
+Server("http://dev.withdata.io")
+```
+
+
+The type represents a Withdata Server.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L16-L20)
+
+
+
+
+Coinfer.CoinferLogger.User 
+
+
+
+```julia
+User(server, "an_authentication_token")
+```
+
+
+Specify which user to use on the server. The authentication token can be found on the user profile page on the server.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L25-L29)
+
+
+
+
+Base.fetch 
+
+
+
+```julia
+fetch(xp::Experiment) -> Experiment
+```
+
+
+Fetch the sample data and log of the given experiment from the server.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L194-L198)
+
+
+
+
+Coinfer.CoinferLogger.create_experiment 
+
+
+
+```julia
+create_experiment(user) -> Experiment
+```
+
+
+Create a new experiment on the server. With an experiment, one can create a `Logger`, which delivers the sample data to that experiment.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L175-L180)
+
+
+
+
+Coinfer.CoinferLogger.experiments 
+
+
+
+```julia
+experiments(user) -> [Experiment]
+```
+
+
+Get all experiments on the server for the user.
+
+
+[source](https://github.com/vectorly-ai/server/blob/21f841a4692c432a75d0bb483c8054358aaf34bf/client/Coinfer.jl/src/CoinferLogger.jl#L211-L215)
+
+
+
+
+DocumenterMermaid.MermaidScriptBlock([...])
+

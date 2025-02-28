@@ -30,7 +30,10 @@
       },
       {
         "tab": "Coinfer.jl",
-        "href": "https://coinfer.ai/coinfer-docs"
+        "pages": [
+          "essentials/coinfer-jl",
+          "essentials/coinfer-jl-ref"
+        ]
       },
       {
         "tab": "Coinfer.js",
