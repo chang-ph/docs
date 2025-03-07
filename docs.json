@@ -28,9 +28,9 @@
       },
       {
         "tab": "Server API",
-        "groups": [
+        "dropdowns": [
           {
-            "group": "Model",
+            "dropdown": "Model",
             "pages": [
               "api-reference/pages/model/list-models",
               "api-reference/pages/model/create-a-new-model",
@@ -42,18 +42,7 @@
             ]
           },
           {
-            "group": "Share",
-            "pages": [
-              "api-reference/pages/share/share-a-model-specified-by-model-id",
-              "api-reference/pages/share/get-basic-share-information-of-a-model-sharing",
-              "api-reference/pages/share/delete-model-shares",
-              "api-reference/pages/share/share-an-experiment",
-              "api-reference/pages/share/get-sharing-information-of-an-experiment",
-              "api-reference/pages/share/delete-experiment-shares"
-            ]
-          },
-          {
-            "group": "Experiment",
+            "dropdown": "Experiment",
             "pages": [
               "api-reference/pages/experiment/list-experiments-or-data",
               "api-reference/pages/experiment/create-an-experiment",
@@ -67,7 +56,18 @@
             ]
           },
           {
-            "group": "Authorization",
+            "dropdown": "Share",
+            "pages": [
+              "api-reference/pages/share/share-a-model-specified-by-model-id",
+              "api-reference/pages/share/get-basic-share-information-of-a-model-sharing",
+              "api-reference/pages/share/delete-model-shares",
+              "api-reference/pages/share/share-an-experiment",
+              "api-reference/pages/share/get-sharing-information-of-an-experiment",
+              "api-reference/pages/share/delete-experiment-shares"
+            ]
+          },
+          {
+            "dropdown": "Authorization",
             "pages": [
               "api-reference/pages/authorization/get-auth0-login-configuration",
               "api-reference/pages/authorization/login-with-auth0",
@@ -83,7 +83,7 @@
             ]
           },
           {
-            "group": "Other",
+            "dropdown": "Other",
             "pages": [
               "api-reference/pages/other/get-changelogs-of-coinfer"
             ]
