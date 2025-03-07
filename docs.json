@@ -28,7 +28,15 @@
       },
       {
         "tab": "Server API",
-        "openapi": "api-reference/openapi.json"
+        "groups": [
+          {
+            "group": "Endpoints",
+            "openapi": {
+              "source": "api-reference/openapi.json",
+              "directory": "api-reference"
+            }
+          }
+        ]
       },
       {
         "tab": "Coinfer.jl",
