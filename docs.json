@@ -28,9 +28,9 @@
       },
       {
         "tab": "Server API",
-        "dropdowns": [
+        "groups": [
           {
-            "dropdown": "Model",
+            "group": "Model",
             "pages": [
               "api-reference/pages/model/list-models",
               "api-reference/pages/model/create-a-new-model",
@@ -42,7 +42,7 @@
             ]
           },
           {
-            "dropdown": "Experiment",
+            "group": "Experiment",
             "pages": [
               "api-reference/pages/experiment/list-experiments-or-data",
               "api-reference/pages/experiment/create-an-experiment",
@@ -56,7 +56,7 @@
             ]
           },
           {
-            "dropdown": "Share",
+            "group": "Share",
             "pages": [
               "api-reference/pages/share/share-a-model-specified-by-model-id",
               "api-reference/pages/share/get-basic-share-information-of-a-model-sharing",
@@ -67,7 +67,7 @@
             ]
           },
           {
-            "dropdown": "Authorization",
+            "group": "Authorization",
             "pages": [
               "api-reference/pages/authorization/get-auth0-login-configuration",
               "api-reference/pages/authorization/login-with-auth0",
@@ -83,7 +83,7 @@
             ]
           },
           {
-            "dropdown": "Other",
+            "group": "Other",
             "pages": [
               "api-reference/pages/other/get-changelogs-of-coinfer"
             ]
