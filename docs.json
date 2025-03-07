@@ -13,9 +13,7 @@
       {
         "tab": "Getting started",
         "pages": [
-          "essentials/quickstart",
-          "essentials/changelog",
-          "essentials/changelog2"
+          "essentials/quickstart"
         ]
       },
       {
@@ -104,6 +102,12 @@
             "group": "Place Holder",
             "pages": []
           }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "pages": [
+          "essentials/changelog"
         ]
       }
     ],
