@@ -28,6 +28,12 @@
         "tab": "Server API",
         "groups": [
           {
+            "group": "Guide",
+            "pages": [
+              "api-reference/pages/gettingstarted"
+            ]
+          },
+          {
             "group": "Model",
             "pages": [
               "api-reference/pages/model/list-models",
@@ -67,6 +73,7 @@
           {
             "group": "Authorization",
             "pages": [
+              "api-reference/pages/authorization/introduction",
               "api-reference/pages/authorization/get-auth0-login-configuration",
               "api-reference/pages/authorization/login-with-auth0",
               "api-reference/pages/authorization/login-with-password",
