@@ -30,11 +30,63 @@
         "tab": "Server API",
         "groups": [
           {
-            "group": "Endpoints",
-            "openapi": {
-              "source": "api-reference/openapi.json",
-              "directory": "api-reference"
-            }
+            "group": "Model",
+            "pages": [
+              "api-reference/pages/model/list-models",
+              "api-reference/pages/model/create-a-new-model",
+              "api-reference/pages/model/delete-models-in-batch",
+              "api-reference/pages/model/view-a-model-by-its-id",
+              "api-reference/pages/model/update-a-model-by-its-id",
+              "api-reference/pages/model/view-share-snapshot-of-a-model",
+              "api-reference/pages/model/get-configuration-about-how-to-run-a-model"
+            ]
+          },
+          {
+            "group": "Share",
+            "pages": [
+              "api-reference/pages/share/share-a-model-specified-by-model-id",
+              "api-reference/pages/share/get-basic-share-information-of-a-model-sharing",
+              "api-reference/pages/share/delete-model-shares",
+              "api-reference/pages/share/share-an-experiment",
+              "api-reference/pages/share/get-sharing-information-of-an-experiment",
+              "api-reference/pages/share/delete-experiment-shares"
+            ]
+          },
+          {
+            "group": "Experiment",
+            "pages": [
+              "api-reference/pages/experiment/list-experiments-or-data",
+              "api-reference/pages/experiment/create-an-experiment",
+              "api-reference/pages/experiment/delete-experiments-in-batch",
+              "api-reference/pages/experiment/view-an-experiment-by-its-id",
+              "api-reference/pages/experiment/update-an-experiment-by-its-id",
+              "api-reference/pages/experiment/view-a-data-object-by-its-id",
+              "api-reference/pages/experiment/update-a-data-object-by-its-id",
+              "api-reference/pages/experiment/delete-a-data-object-by-its-id",
+              "api-reference/pages/experiment/get-cloudwatch-logs"
+            ]
+          },
+          {
+            "group": "Authorization",
+            "pages": [
+              "api-reference/pages/authorization/get-auth0-login-configuration",
+              "api-reference/pages/authorization/login-with-auth0",
+              "api-reference/pages/authorization/login-with-password",
+              "api-reference/pages/authorization/get-information-of-current-user",
+              "api-reference/pages/authorization/update-information-of-current-user",
+              "api-reference/pages/authorization/logout-the-system",
+              "api-reference/pages/authorization/list-all-of-current-users-tokens",
+              "api-reference/pages/authorization/create-a-new-authorization-token",
+              "api-reference/pages/authorization/update-a-token-by-its-id",
+              "api-reference/pages/authorization/delete-a-token-by-its-id",
+              "api-reference/pages/authorization/update-current-user-or-a-token"
+            ]
+          },
+          {
+            "group": "Other",
+            "pages": [
+              "api-reference/pages/other/get-changelogs-of-coinfer"
+            ]
           }
         ]
       },
