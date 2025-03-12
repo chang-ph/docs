@@ -73,7 +73,7 @@
           {
             "group": "Authorization",
             "pages": [
-              "api-reference/pages/authorization/introduction",
+              "api-reference/pages/authorization/note",
               "api-reference/pages/authorization/get-auth0-login-configuration",
               "api-reference/pages/authorization/login-with-auth0",
               "api-reference/pages/authorization/login-with-password",
@@ -85,12 +85,6 @@
               "api-reference/pages/authorization/update-a-token-by-its-id",
               "api-reference/pages/authorization/delete-a-token-by-its-id",
               "api-reference/pages/authorization/update-current-user-or-a-token"
-            ]
-          },
-          {
-            "group": "Other",
-            "pages": [
-              "api-reference/pages/other/get-changelogs-of-coinfer"
             ]
           }
         ]
