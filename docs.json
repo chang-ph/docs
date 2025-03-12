@@ -34,11 +34,57 @@
             ]
           },
           {
-            "group": "Endpoints",
-            "openapi": {
-              "source": "api-reference/openapi.json",
-              "directory": "api-reference"
-            }
+            "group": "Model",
+            "pages": [
+              "api-reference/pages/get-turing-object",
+              "api-reference/pages/delete-turing-object",
+              "api-reference/pages/post-turing-object",
+              "api-reference/pages/post-turing-object-{objid}",
+              "api-reference/pages/get-turing-object-{objid}",
+              "api-reference/pages/get-turing-object-{objid}-share-{share_id}",
+              "api-reference/pages/get-turing-config"
+            ]
+          },
+          {
+            "group": "Experiment",
+            "pages": [
+              "api-reference/pages/get-mcmc-object",
+              "api-reference/pages/post-mcmc-object",
+              "api-reference/pages/delete-mcmc-object",
+              "api-reference/pages/get-mcmc-object-X{objid}",
+              "api-reference/pages/post-mcmc-object-X{objid}",
+              "api-reference/pages/get-mcmc-object-D{objid}",
+              "api-reference/pages/post-mcmc-object-D{objid}",
+              "api-reference/pages/delete-mcmc-object-D{objid}",
+              "api-reference/pages/get-mcmc-object-{objid}-cloudwatch-logs"
+            ]
+          },
+          {
+            "group": "Share",
+            "pages": [
+              "api-reference/pages/post-turing-model-{model_id}-share",
+              "api-reference/pages/delete-turing-model-share-{share_id}",
+              "api-reference/pages/get-turing-model-share-{share_id}",
+              "api-reference/pages/post-mcmc-experiment-{exp_id}-share",
+              "api-reference/pages/delete-mcmc-experiment-share-{share_id}",
+              "api-reference/pages/get-mcmc-experiment-share-{share_id}"
+            ]
+          },
+          {
+            "group": "Authorization",
+            "pages": [
+              "api-reference/pages/get-base-auth0-config",
+              "api-reference/pages/post-base-auth0-login",
+              "api-reference/pages/post-base-login",
+              "api-reference/pages/get-base-user",
+              "api-reference/pages/put-base-user",
+              "api-reference/pages/post-base-logout",
+              "api-reference/pages/get-base-user-tokens",
+              "api-reference/pages/post-base-user-tokens",
+              "api-reference/pages/put-base-user-token-{token_id}",
+              "api-reference/pages/delete-base-user-token-{token_id}",
+              "api-reference/pages/post-base-update"
+            ]
           }
         ]
       },
