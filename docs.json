@@ -34,6 +34,23 @@
             ]
           },
           {
+            "group": "Authorization",
+            "pages": [
+              "api-reference/pages/Authorization/introduction",
+              "api-reference/pages/Authorization/get-base-auth0-config",
+              "api-reference/pages/Authorization/post-base-auth0-login",
+              "api-reference/pages/Authorization/post-base-login",
+              "api-reference/pages/Authorization/get-base-user",
+              "api-reference/pages/Authorization/put-base-user",
+              "api-reference/pages/Authorization/post-base-logout",
+              "api-reference/pages/Authorization/get-base-user-tokens",
+              "api-reference/pages/Authorization/post-base-user-tokens",
+              "api-reference/pages/Authorization/put-base-user-token-{token_id}",
+              "api-reference/pages/Authorization/delete-base-user-token-{token_id}",
+              "api-reference/pages/Authorization/post-base-update"
+            ]
+          },
+          {
             "group": "Model",
             "pages": [
               "api-reference/pages/Model/introduction",
@@ -71,23 +88,6 @@
               "api-reference/pages/Share/post-mcmc-experiment-{exp_id}-share",
               "api-reference/pages/Share/delete-mcmc-experiment-share-{share_id}",
               "api-reference/pages/Share/get-mcmc-experiment-share-{share_id}"
-            ]
-          },
-          {
-            "group": "Authorization",
-            "pages": [
-              "api-reference/pages/Authorization/introduction",
-              "api-reference/pages/Authorization/get-base-auth0-config",
-              "api-reference/pages/Authorization/post-base-auth0-login",
-              "api-reference/pages/Authorization/post-base-login",
-              "api-reference/pages/Authorization/get-base-user",
-              "api-reference/pages/Authorization/put-base-user",
-              "api-reference/pages/Authorization/post-base-logout",
-              "api-reference/pages/Authorization/get-base-user-tokens",
-              "api-reference/pages/Authorization/post-base-user-tokens",
-              "api-reference/pages/Authorization/put-base-user-token-{token_id}",
-              "api-reference/pages/Authorization/delete-base-user-token-{token_id}",
-              "api-reference/pages/Authorization/post-base-update"
             ]
           }
         ]
