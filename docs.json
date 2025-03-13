@@ -30,64 +30,64 @@
           {
             "group": "Guide",
             "pages": [
-              "api-reference/pages/gettingstarted"
+              "api-reference/categories/gettingstarted"
             ]
           },
           {
             "group": "Authorization",
             "pages": [
-              "api-reference/pages/Authorization/introduction",
-              "api-reference/pages/Authorization/get-base-auth0-config",
-              "api-reference/pages/Authorization/post-base-auth0-login",
-              "api-reference/pages/Authorization/post-base-login",
-              "api-reference/pages/Authorization/get-base-user",
-              "api-reference/pages/Authorization/put-base-user",
-              "api-reference/pages/Authorization/post-base-logout",
-              "api-reference/pages/Authorization/get-base-user-tokens",
-              "api-reference/pages/Authorization/post-base-user-tokens",
-              "api-reference/pages/Authorization/put-base-user-token-{token_id}",
-              "api-reference/pages/Authorization/delete-base-user-token-{token_id}",
-              "api-reference/pages/Authorization/post-base-update"
+              "api-reference/categories/Authorization/introduction",
+              "api-reference/categories/Authorization/get-base-auth0-config",
+              "api-reference/categories/Authorization/post-base-auth0-login",
+              "api-reference/categories/Authorization/post-base-login",
+              "api-reference/categories/Authorization/get-base-user",
+              "api-reference/categories/Authorization/put-base-user",
+              "api-reference/categories/Authorization/post-base-logout",
+              "api-reference/categories/Authorization/get-base-user-tokens",
+              "api-reference/categories/Authorization/post-base-user-tokens",
+              "api-reference/categories/Authorization/put-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/post-base-update"
             ]
           },
           {
             "group": "Model",
             "pages": [
-              "api-reference/pages/Model/introduction",
-              "api-reference/pages/Model/get-turing-object",
-              "api-reference/pages/Model/delete-turing-object",
-              "api-reference/pages/Model/post-turing-object",
-              "api-reference/pages/Model/post-turing-object-{objid}",
-              "api-reference/pages/Model/get-turing-object-{objid}",
-              "api-reference/pages/Model/get-turing-object-{objid}-share-{share_id}",
-              "api-reference/pages/Model/get-turing-config"
+              "api-reference/categories/Model/introduction",
+              "api-reference/categories/Model/get-turing-object",
+              "api-reference/categories/Model/delete-turing-object",
+              "api-reference/categories/Model/post-turing-object",
+              "api-reference/categories/Model/post-turing-object-{objid}",
+              "api-reference/categories/Model/get-turing-object-{objid}",
+              "api-reference/categories/Model/get-turing-object-{objid}-share-{share_id}",
+              "api-reference/categories/Model/get-turing-config"
             ]
           },
           {
             "group": "Experiment",
             "pages": [
-              "api-reference/pages/Experiment/introduction",
-              "api-reference/pages/Experiment/get-mcmc-object",
-              "api-reference/pages/Experiment/post-mcmc-object",
-              "api-reference/pages/Experiment/delete-mcmc-object",
-              "api-reference/pages/Experiment/get-mcmc-object-X{objid}",
-              "api-reference/pages/Experiment/post-mcmc-object-X{objid}",
-              "api-reference/pages/Experiment/get-mcmc-object-D{objid}",
-              "api-reference/pages/Experiment/post-mcmc-object-D{objid}",
-              "api-reference/pages/Experiment/delete-mcmc-object-D{objid}",
-              "api-reference/pages/Experiment/get-mcmc-object-{objid}-cloudwatch-logs"
+              "api-reference/categories/Experiment/introduction",
+              "api-reference/categories/Experiment/get-mcmc-object",
+              "api-reference/categories/Experiment/post-mcmc-object",
+              "api-reference/categories/Experiment/delete-mcmc-object",
+              "api-reference/categories/Experiment/get-mcmc-object-X{objid}",
+              "api-reference/categories/Experiment/post-mcmc-object-X{objid}",
+              "api-reference/categories/Experiment/get-mcmc-object-D{objid}",
+              "api-reference/categories/Experiment/post-mcmc-object-D{objid}",
+              "api-reference/categories/Experiment/delete-mcmc-object-D{objid}",
+              "api-reference/categories/Experiment/get-mcmc-object-{objid}-cloudwatch-logs"
             ]
           },
           {
             "group": "Share",
             "pages": [
-              "api-reference/pages/Share/introduction",
-              "api-reference/pages/Share/post-turing-model-{model_id}-share",
-              "api-reference/pages/Share/delete-turing-model-share-{share_id}",
-              "api-reference/pages/Share/get-turing-model-share-{share_id}",
-              "api-reference/pages/Share/post-mcmc-experiment-{exp_id}-share",
-              "api-reference/pages/Share/delete-mcmc-experiment-share-{share_id}",
-              "api-reference/pages/Share/get-mcmc-experiment-share-{share_id}"
+              "api-reference/categories/Share/introduction",
+              "api-reference/categories/Share/post-turing-model-{model_id}-share",
+              "api-reference/categories/Share/delete-turing-model-share-{share_id}",
+              "api-reference/categories/Share/get-turing-model-share-{share_id}",
+              "api-reference/categories/Share/post-mcmc-experiment-{exp_id}-share",
+              "api-reference/categories/Share/delete-mcmc-experiment-share-{share_id}",
+              "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}"
             ]
           }
         ]
