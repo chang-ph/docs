@@ -34,23 +34,6 @@
             ]
           },
           {
-            "group": "Authorization",
-            "pages": [
-              "api-reference/categories/Authorization/introduction",
-              "api-reference/categories/Authorization/get-base-auth0-config",
-              "api-reference/categories/Authorization/post-base-auth0-login",
-              "api-reference/categories/Authorization/post-base-login",
-              "api-reference/categories/Authorization/get-base-user",
-              "api-reference/categories/Authorization/put-base-user",
-              "api-reference/categories/Authorization/post-base-logout",
-              "api-reference/categories/Authorization/get-base-user-tokens",
-              "api-reference/categories/Authorization/post-base-user-tokens",
-              "api-reference/categories/Authorization/put-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/post-base-update"
-            ]
-          },
-          {
             "group": "Model",
             "pages": [
               "api-reference/categories/Model/introduction",
@@ -60,7 +43,10 @@
               "api-reference/categories/Model/post-turing-object-{objid}",
               "api-reference/categories/Model/get-turing-object-{objid}",
               "api-reference/categories/Model/get-turing-object-{objid}-share-{share_id}",
-              "api-reference/categories/Model/get-turing-config"
+              "api-reference/categories/Model/get-turing-config",
+              "api-reference/categories/Model/get-turing-github-repository",
+              "api-reference/categories/Model/get-turing-github-branch",
+              "api-reference/categories/Model/post-turing-github-model"
             ]
           },
           {
@@ -88,6 +74,23 @@
               "api-reference/categories/Share/post-mcmc-experiment-{exp_id}-share",
               "api-reference/categories/Share/delete-mcmc-experiment-share-{share_id}",
               "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}"
+            ]
+          },
+          {
+            "group": "Authorization",
+            "pages": [
+              "api-reference/categories/Authorization/introduction",
+              "api-reference/categories/Authorization/get-base-auth0-config",
+              "api-reference/categories/Authorization/post-base-auth0-login",
+              "api-reference/categories/Authorization/post-base-login",
+              "api-reference/categories/Authorization/get-base-user",
+              "api-reference/categories/Authorization/put-base-user",
+              "api-reference/categories/Authorization/post-base-logout",
+              "api-reference/categories/Authorization/get-base-user-tokens",
+              "api-reference/categories/Authorization/post-base-user-tokens",
+              "api-reference/categories/Authorization/put-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/post-base-update"
             ]
           }
         ]
