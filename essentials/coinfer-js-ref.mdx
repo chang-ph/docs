@@ -1,0 +1,2710 @@
+---
+title: "Reference"
+hide_title: true
+update_time: 2025-3-17 14:37:52
+custom_edit_url: null
+pagination_prev: null
+pagination_next: null
+---
+
+# Reference
+
+
+
+## coinfer.js package
+
+### Classes
+
+<table><thead><tr><th>
+
+Class
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Coinfer
+
+
+</td><td>
+
+The coinferJS's main class.
+
+
+</td></tr>
+</tbody></table>
+
+### Functions
+
+<table><thead><tr><th>
+
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+useCoinfer()
+
+
+</td><td>
+
+A hook used to retrieve the Coinfer instance within CoinferContext.
+
+
+</td></tr>
+</tbody></table>
+
+### Interfaces
+
+<table><thead><tr><th>
+
+Interface
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+IExperimentSocketLogActionType
+
+
+</td><td>
+
+The data type of the log information obtained from WebSocket.
+
+
+</td></tr>
+<tr><td>
+
+IExperimentSocketNamesActionType
+
+
+</td><td>
+
+After establishing the connection on the backend (requiring version: '1.0'), the data returned once includes the Chains and all known Variable names under each Chain.
+
+
+</td></tr>
+<tr><td>
+
+IExperimentSocketPlotDataActionType
+
+
+</td><td>
+
+The plot data obtained from the WebSocket.
+
+
+</td></tr>
+<tr><td>
+
+ISuperLogsType
+
+
+</td><td>
+
+The logs for the super user.
+
+
+</td></tr>
+<tr><td>
+
+IUserInfoType
+
+
+</td><td>
+
+The userInfo structure.
+
+
+</td></tr>
+</tbody></table>
+
+### Variables
+
+<table><thead><tr><th>
+
+Variable
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+CoinferContext
+
+
+</td><td>
+
+Coinferjs's Context
+
+
+</td></tr>
+<tr><td>
+
+useCoinferAction
+
+
+</td><td>
+
+A hook for invoking the coinferJS feature using a more convenient method.
+
+
+</td></tr>
+<tr><td>
+
+useExperimentWebSocket
+
+
+</td><td>
+
+You can use this hook to access the WebSocket connection of the Experiment.
+
+
+</td></tr>
+<tr><td>
+
+useNewCoinfer
+
+
+</td><td>
+
+
+
+</td></tr>
+</tbody></table>
+
+### Type Aliases
+
+<table><thead><tr><th>
+
+Type Alias
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+ExperimentSocketActionTypes
+
+
+</td><td>
+
+The type of data obtained from the WebSocket.
+
+
+</td></tr>
+<tr><td>
+
+FetchFunctionReturnType
+
+
+</td><td>
+
+
+
+</td></tr>
+<tr><td>
+
+FetchFunctionType
+
+
+</td><td>
+
+
+
+</td></tr>
+</tbody></table>
+
+
+## Coinfer.\_\_VERSION property
+
+The default backend API server address.
+
+**Signature:**
+
+```typescript
+static __VERSION: string;
+```
+
+
+## Coinfer.(constructor)
+
+Constructs a new instance of the `Coinfer` class
+
+**Signature:**
+
+```typescript
+constructor();
+```
+
+
+## Coinfer.check() method
+
+**Signature:**
+
+```typescript
+check(taskId: any, period?: number): Promise<void>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+taskId
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+period
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;void&gt;
+
+
+## Coinfer.checkToken() method
+
+**Signature:**
+
+```typescript
+checkToken(token: string): Promise<any>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+token
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.config property
+
+**Signature:**
+
+```typescript
+config: ICoinferConfig;
+```
+
+
+## Coinfer.create() method
+
+**Signature:**
+
+```typescript
+create(payload: any): Promise<unknown>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+payload
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;unknown&gt;
+
+
+## Coinfer.createShared() method
+
+Share Model or Experiment with other users.
+
+**Signature:**
+
+```typescript
+createShared<T extends keyof CreateSharedReturnMaps>(type: T, sharedItemId: string, sharedParams: ISharedAuthParams): Promise<ICommonResWithStatus<SharedGetReturnMaps[T]> | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sharedItemId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sharedParams
+
+
+</td><td>
+
+ISharedAuthParams
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ICommonResWithStatus&lt;SharedGetReturnMaps\[T\]&gt; | null&gt;
+
+
+## Coinfer.DefaultSettings property
+
+The default backend URL server address.
+
+**Signature:**
+
+```typescript
+static DefaultSettings: ICoinferConfig;
+```
+
+### Example
+
+
+```
+https://api.coinfer.ai
+```
+
+
+## Coinfer.del() method
+
+Delete the model.
+
+**Signature:**
+
+```typescript
+del(...shortIds: string[]): Promise<boolean>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+shortIds
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;boolean&gt;
+
+### Example 1
+
+
+```typescript
+// delete single model
+const result = await coinfer.model.del('M01DCAB');
+
+// delete models
+const result = await coinfer.model.del('M01DCAB', 'M01DCAC', 'M01DCAB', ...);
+```
+Delete the experiment.
+
+### Example 2
+
+
+```typescript
+// delete single experiment
+const result = await coinfer.experiment.del('X01DCAB');
+
+// delete experiments
+const result = await coinfer.experiment.del('X01DCAB', 'X01DCAC', 'X01DCAB', ...);
+```
+Delete the token.
+
+### Example 3
+
+
+```typescript
+// delete the token
+const result = await coinfer.experiment.del(2); // Assuming the id of this token is 2.
+```
+
+
+## Coinfer.deleteAccessToken() method
+
+delete the access token.
+
+**Signature:**
+
+```typescript
+deleteAccessToken(): Promise<void>;
+```
+**Returns:**
+
+Promise&lt;void&gt;
+
+
+## Coinfer.deleteShared() method
+
+Delete the sharing of a Model or Experiment.
+
+**Signature:**
+
+```typescript
+deleteShared<T extends keyof DeleteSharedReturnMaps>(type: T, ids: string[]): Promise<ICommonResWithStatus<DeleteSharedReturnMaps[T]> | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+ids
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ICommonResWithStatus&lt;DeleteSharedReturnMaps\[T\]&gt; | null&gt;
+
+
+## Coinfer.experiment property
+
+**Signature:**
+
+```typescript
+get experiment(): this;
+```
+
+
+## Coinfer.get() method
+
+**Signature:**
+
+```typescript
+get(props: ICoinferGetProps & CoinferAuthorizationExtraParams, extraParams?: ICoinferReqExtraParams): Promise<unknown>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+props
+
+
+</td><td>
+
+ICoinferGetProps & CoinferAuthorizationExtraParams
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+extraParams
+
+
+</td><td>
+
+ICoinferReqExtraParams
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;unknown&gt;
+
+
+## Coinfer.getExperimentStatus() method
+
+Get the status infomation of the Experiment.
+
+**Signature:**
+
+```typescript
+getExperimentStatus(experimentId: string, params: Partial<ICoinferReqExtraParams>): Promise<any>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+experimentId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+params
+
+
+</td><td>
+
+Partial&lt;ICoinferReqExtraParams&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.getSharedInfo() method
+
+Get the shared information of the Model/Experiment, such as whether a password is required
+
+**Signature:**
+
+```typescript
+getSharedInfo(type: 'model' | 'experiment', shareId: string): Promise<SharedInfoMaps | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+'model' | 'experiment'
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+shareId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;SharedInfoMaps | null&gt;
+
+
+## Coinfer.getSharedList() method
+
+Get a list of Models and Experiments to share.
+
+**Signature:**
+
+```typescript
+getSharedList<T extends keyof (SharedGetReturnMaps & ToMeSharedCreateMaps)>(type: T, pageConfig: IPagingParams): Promise<IMCMCPagingType<(SharedGetReturnMaps & ToMeSharedCreateMaps)[T]> | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+pageConfig
+
+
+</td><td>
+
+IPagingParams
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IMCMCPagingType&lt;(SharedGetReturnMaps & ToMeSharedCreateMaps)\[T\]&gt; | null&gt;
+
+
+## Coinfer.getSharedModel() method
+
+Get the shared information of the Model.
+
+**Signature:**
+
+```typescript
+getSharedModel(modelId: string, sharedId: string, extraParams?: ICoinferReqExtraParams): Promise<ICommonResWithStatus<SharedInfo> | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+modelId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+sharedId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+extraParams
+
+
+</td><td>
+
+ICoinferReqExtraParams
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ICommonResWithStatus&lt;SharedInfo&gt; | null&gt;
+
+
+## Coinfer.getTuringConfig() method
+
+Get the turing configuration infomation.
+
+**Signature:**
+
+```typescript
+getTuringConfig(): Promise<ITuringConfig>;
+```
+**Returns:**
+
+Promise&lt;ITuringConfig&gt;
+
+
+## Coinfer.list() method
+
+**Signature:**
+
+```typescript
+list(extraParams?: \{
+        [key: string]: any;
+    \}): Promise<any>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+extraParams
+
+
+</td><td>
+
+\{ \[key: string\]: any; \}
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.loadConfigFile() method
+
+**Signature:**
+
+```typescript
+loadConfigFile(): Promise<any>;
+```
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.logs() method
+
+Show the detailed logs (only for superuser).
+
+**Signature:**
+
+```typescript
+logs(id: any): Promise<ISuperLogsType>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+id
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ISuperLogsType&gt;
+
+### Example
+
+
+```javascript
+const data = await coinfer.experiment.logs(experimentId);
+```
+
+
+## Coinfer class
+
+The coinferJS's main class.
+
+**Signature:**
+
+```typescript
+declare class Coinfer 
+```
+
+### Constructors
+
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+(constructor)()
+
+
+</td><td>
+
+
+</td><td>
+
+Constructs a new instance of the `Coinfer` class
+
+
+</td></tr>
+</tbody></table>
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+\_\_VERSION
+
+
+</td><td>
+
+`static`
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The default backend API server address.
+
+
+</td></tr>
+<tr><td>
+
+config
+
+
+</td><td>
+
+
+</td><td>
+
+ICoinferConfig
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+DefaultSettings
+
+
+</td><td>
+
+`static`
+
+
+</td><td>
+
+ICoinferConfig
+
+
+</td><td>
+
+The default backend URL server address.
+
+
+</td></tr>
+<tr><td>
+
+experiment
+
+
+</td><td>
+
+`readonly`
+
+
+</td><td>
+
+this
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+model
+
+
+</td><td>
+
+`readonly`
+
+
+</td><td>
+
+this
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+onSavedAccessToken
+
+
+</td><td>
+
+
+</td><td>
+
+(any: any) =&gt; void
+
+
+</td><td>
+
+login with token
+
+
+</td></tr>
+<tr><td>
+
+task
+
+
+</td><td>
+
+`readonly`
+
+
+</td><td>
+
+this
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+token
+
+
+</td><td>
+
+`readonly`
+
+
+</td><td>
+
+this
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+websocket
+
+
+</td><td>
+
+`readonly`
+
+
+</td><td>
+
+this
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+### Methods
+
+<table><thead><tr><th>
+
+Method
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+check(taskId, period)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+checkToken(token)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+create(payload)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+createShared(type, sharedItemId, sharedParams)
+
+
+</td><td>
+
+
+</td><td>
+
+Share Model or Experiment with other users.
+
+
+</td></tr>
+<tr><td>
+
+del(shortIds)
+
+
+</td><td>
+
+
+</td><td>
+
+Delete the model.
+
+
+</td></tr>
+<tr><td>
+
+deleteAccessToken()
+
+
+</td><td>
+
+
+</td><td>
+
+delete the access token.
+
+
+</td></tr>
+<tr><td>
+
+deleteShared(type, ids)
+
+
+</td><td>
+
+
+</td><td>
+
+Delete the sharing of a Model or Experiment.
+
+
+</td></tr>
+<tr><td>
+
+get(props, extraParams)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+getExperimentStatus(experimentId, params)
+
+
+</td><td>
+
+
+</td><td>
+
+Get the status infomation of the Experiment.
+
+
+</td></tr>
+<tr><td>
+
+getSharedInfo(type, shareId)
+
+
+</td><td>
+
+
+</td><td>
+
+Get the shared information of the Model/Experiment, such as whether a password is required
+
+
+</td></tr>
+<tr><td>
+
+getSharedList(type, pageConfig)
+
+
+</td><td>
+
+
+</td><td>
+
+Get a list of Models and Experiments to share.
+
+
+</td></tr>
+<tr><td>
+
+getSharedModel(modelId, sharedId, extraParams)
+
+
+</td><td>
+
+
+</td><td>
+
+Get the shared information of the Model.
+
+
+</td></tr>
+<tr><td>
+
+getTuringConfig()
+
+
+</td><td>
+
+
+</td><td>
+
+Get the turing configuration infomation.
+
+
+</td></tr>
+<tr><td>
+
+list(extraParams)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+loadConfigFile()
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+logs(id)
+
+
+</td><td>
+
+
+</td><td>
+
+Show the detailed logs (only for superuser).
+
+
+</td></tr>
+<tr><td>
+
+onDeleteAccessToken()
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+onError(err)
+
+
+</td><td>
+
+
+</td><td>
+
+This method is called when an error occurs, such as authentication failure
+
+
+</td></tr>
+<tr><td>
+
+run(params)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+runBatch(params)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+runWithLambda(models)
+
+
+</td><td>
+
+
+</td><td>
+
+Run Model through lamdba
+
+
+</td></tr>
+<tr><td>
+
+saveAccessToken(token)
+
+
+</td><td>
+
+
+</td><td>
+
+After successful login, the method of storing the authorization code.
+
+
+</td></tr>
+<tr><td>
+
+setAccessToken(token)
+
+
+</td><td>
+
+
+</td><td>
+
+Set or update the authorization token.
+
+
+</td></tr>
+<tr><td>
+
+setConfig(config)
+
+
+</td><td>
+
+
+</td><td>
+
+Set config for Coinfer.
+
+
+</td></tr>
+<tr><td>
+
+update(payload)
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## Coinfer.model property
+
+**Signature:**
+
+```typescript
+get model(): this;
+```
+
+
+## Coinfer.onDeleteAccessToken() method
+
+**Signature:**
+
+```typescript
+onDeleteAccessToken(): Promise<void>;
+```
+**Returns:**
+
+Promise&lt;void&gt;
+
+
+## Coinfer.onError() method
+
+This method is called when an error occurs, such as authentication failure
+
+**Signature:**
+
+```typescript
+onError(err: any): void;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+err
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+void
+
+
+## Coinfer.onSavedAccessToken property
+
+login with token
+
+**Signature:**
+
+```typescript
+onSavedAccessToken: (any: any) => void;
+```
+
+
+## Coinfer.run() method
+
+> Warning: This API is now obsolete.
+> 
+> Run a model, please instead it of `runWithLambda`<></>.
+> 
+
+**Signature:**
+
+```typescript
+run(params: ICoinferRunModelProps): Promise<unknown>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+params
+
+
+</td><td>
+
+ICoinferRunModelProps
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;unknown&gt;
+
+### Example 1
+
+
+```javascript
+const res = await coinfer.model.run(params);
+```
+Alternatively, this method is invoked within useCoinferAction.
+
+### Example 2
+
+
+```javascript
+const [result, runningModel, isRunningLoading] = useCoinferAction((params) => coinferjs?.model.run(params), [coinferjs]);
+```
+
+
+## Coinfer.runBatch() method
+
+> Warning: This API is now obsolete.
+> 
+> Run some models in batches, please instead it of `runWithLambda`<></>.
+> 
+
+**Signature:**
+
+```typescript
+runBatch(params: IVectorlyRunModelProps[]): Promise<IModelRunInBatchResult>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+params
+
+
+</td><td>
+
+IVectorlyRunModelProps\[\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IModelRunInBatchResult&gt;
+
+### Example 1
+
+
+```javascript
+const res = await coinfer.model.run([
+  \{\}
+]);
+```
+Alternatively, this method is invoked within useCoinferAction.
+
+### Example 2
+
+
+```javascript
+const [result, runningModel, isRunningLoading] = useCoinferAction((params) => coinferjs?.model.run(params), [coinferjs]);
+```
+
+
+## Coinfer.runWithLambda() method
+
+Run Model through lamdba
+
+**Signature:**
+
+```typescript
+runWithLambda(...models: IModelConfigInLambda[]): Promise<IRunLambdaRes['data'] | IRunLambdaBatchRes['data']>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+models
+
+
+</td><td>
+
+IModelConfigInLambda\[\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IRunLambdaRes\['data'\] | IRunLambdaBatchRes\['data'\]&gt;
+
+
+## Coinfer.saveAccessToken() method
+
+After successful login, the method of storing the authorization code.
+
+**Signature:**
+
+```typescript
+saveAccessToken(token: any): Promise<any>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+token
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.setAccessToken() method
+
+Set or update the authorization token.
+
+**Signature:**
+
+```typescript
+setAccessToken(token: string): void;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+token
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+void
+
+
+## Coinfer.setConfig() method
+
+Set config for Coinfer.
+
+**Signature:**
+
+```typescript
+setConfig(config: Partial<ICoinferConfig>): void;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+config
+
+
+</td><td>
+
+Partial&lt;ICoinferConfig&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+void
+
+
+## Coinfer.task property
+
+**Signature:**
+
+```typescript
+get task(): this;
+```
+
+
+## Coinfer.token property
+
+**Signature:**
+
+```typescript
+get token(): this;
+```
+
+
+## Coinfer.update() method
+
+**Signature:**
+
+```typescript
+update(payload: ICoinferCommonPutProps): Promise<unknown>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+payload
+
+
+</td><td>
+
+ICoinferCommonPutProps
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;unknown&gt;
+
+
+## Coinfer.websocket property
+
+**Signature:**
+
+```typescript
+get websocket(): this;
+```
+
+
+## CoinferContext variable
+
+Coinferjs's Context
+
+**Signature:**
+
+```typescript
+CoinferContext: any
+```
+
+### Example
+
+You can invoke it in `App.tsx` or `App.jsx`<></>.
+
+```jsx
+<CoinferContext.Provider value=\{\{ coinferjs: coinferjsInst \}\}>
+  <Outlet />
+</CoinferContext.Provider>
+```
+
+
+## ExperimentSocketActionTypes type
+
+The type of data obtained from the WebSocket.
+
+**Signature:**
+
+```typescript
+type ExperimentSocketActionTypes$1 = 
+  | IExperimentSocketPlotDataActionType$1
+  | IExperimentSocketFinishedActionType$1
+  | IExperimentSocketErrorActionType$1
+  | IExperimentSocketLogActionType$1
+  | IExperimentSocketNamesActionType$1
+  | IExperimentSocketExtraActionType$1
+  | IExperimentErrorActionType$1
+```
+**References:** IExperimentSocketPlotDataActionType$1<></>, IExperimentSocketLogActionType$1<></>, IExperimentSocketNamesActionType$1
+
+
+## FetchFunctionReturnType type
+
+
+**Signature:**
+
+```typescript
+type FetchFunctionReturnType$1<T> = [T | undefined, (...data: any[]) => Promise<T>, boolean];
+```
+
+
+## FetchFunctionType type
+
+
+**Signature:**
+
+```typescript
+type FetchFunctionType$1 = <T = any>(cfAction: (...parms: any[]) => any, dependencies: any[]) => FetchFunctionReturnType$1<T>;
+```
+**References:** FetchFunctionReturnType$1
+
+
+## IExperimentSocketLogActionType.data property
+
+**Signature:**
+
+```typescript
+data: string
+```
+
+
+## IExperimentSocketLogActionType interface
+
+The data type of the log information obtained from WebSocket.
+
+**Signature:**
+
+```typescript
+interface IExperimentSocketLogActionType$1 extends IReduceActionWithKV$1<'experiment:output', \{data: string\}>
+```
+**Extends:** IReduceActionWithKV$1&lt;'experiment:output', \{data: string\}&gt;
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+data
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## IExperimentSocketNamesActionType.data property
+
+**Signature:**
+
+```typescript
+data: IChainNameType$1[]
+```
+
+
+## IExperimentSocketNamesActionType interface
+
+After establishing the connection on the backend (requiring version: '1.0'), the data returned once includes the Chains and all known Variable names under each Chain.
+
+**Signature:**
+
+```typescript
+interface IExperimentSocketNamesActionType$1 extends IReduceActionWithKV$1<'names', \{data: IChainNameType$1[]\}>
+```
+**Extends:** IReduceActionWithKV$1&lt;'names', \{data: IChainNameType$1\[\]\}&gt;
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+data
+
+
+</td><td>
+
+
+</td><td>
+
+IChainNameType$1\[\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## IExperimentSocketPlotDataActionType.data property
+
+**Signature:**
+
+```typescript
+data: \{[key: string]: any[]\}
+```
+
+
+## IExperimentSocketPlotDataActionType interface
+
+The plot data obtained from the WebSocket.
+
+**Signature:**
+
+```typescript
+interface IExperimentSocketPlotDataActionType$1 extends IReduceActionWithKV$1<'experiment:event', \{data: \{[key: string]: any[]\}\}>
+```
+**Extends:** IReduceActionWithKV$1&lt;'experiment:event', \{data: \{\[key: string\]: any\[\]\}\}&gt;
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+data
+
+
+</td><td>
+
+
+</td><td>
+
+\{\[key: string\]: any\[\]\}
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## ISuperLogsType.logs property
+
+**Signature:**
+
+```typescript
+logs: [number, string]
+```
+
+
+## ISuperLogsType interface
+
+The logs for the super user.
+
+**Signature:**
+
+```typescript
+interface ISuperLogsType$1 
+```
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+logs
+
+
+</td><td>
+
+
+</td><td>
+
+\[number, string\]
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## IUserInfoType.id property
+
+**Signature:**
+
+```typescript
+id: number
+```
+
+
+## IUserInfoType interface
+
+The userInfo structure.
+
+**Signature:**
+
+```typescript
+interface IUserInfoType 
+```
+
+### Properties
+
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+id
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+super
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+username
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
+
+## IUserInfoType.super property
+
+**Signature:**
+
+```typescript
+super: boolean
+```
+
+
+## IUserInfoType.username property
+
+**Signature:**
+
+```typescript
+username: string
+```
+
+
+## useCoinfer() function
+
+A hook used to retrieve the Coinfer instance within CoinferContext.
+
+**Signature:**
+
+```typescript
+useCoinfer: () => Coinfer | null
+```
+**Returns:**
+
+Coinfer | null
+
+### Example
+
+Here's an example :
+
+```
+// ...
+const cf = useCoinfer();
+
+```
+
+
+## useCoinferAction variable
+
+A hook for invoking the coinferJS feature using a more convenient method.
+
+**Signature:**
+
+```typescript
+useCoinferAction: FetchFunctionType
+```
+
+### Example
+
+
+```
+const [models, fetchModels, isloading] = useCoinferAction(params => cf?.model.list(params.page_no, params.page_size), [cf]);
+fetchModels(\{page_no: 1, page_size: 10\});
+```
+
+
+## useExperimentWebSocket variable
+
+You can use this hook to access the WebSocket connection of the Experiment.
+
+**Signature:**
+
+```typescript
+useExperimentWebSocket: UseExperimentWebSocketType
+```
+
+### Example
+
+
+```
+const \{ replaySubject, addWebSocketListener, removeWebSocketListener, send \} = useExperimentWebSocket(baseInfo.url, baseInfo.token);
+```
+
+
+## useNewCoinfer variable
+
+
+**Signature:**
+
+```typescript
+useNewCoinfer: UseNewCoinferType
+```

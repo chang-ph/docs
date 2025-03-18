@@ -104,11 +104,9 @@
       },
       {
         "tab": "Coinfer.js",
-        "groups": [
-          {
-            "group": "Place Holder",
-            "pages": []
-          }
+        "pages": [
+          "essentials/coinfer-js-ref",
+          "essentials/coinfer-js"
         ]
       },
       {
