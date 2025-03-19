@@ -1,13 +1,11 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-3-17 14:37:52
+update_time: 2025-3-18 9:55:30
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
 ---
-
-# Reference
 
 
 
@@ -242,7 +240,7 @@ FetchFunctionType
 
 ## Coinfer.\_\_VERSION property
 
-The default backend API server address.
+The default backend API server version.
 
 **Signature:**
 
@@ -1029,9 +1027,9 @@ Promise&lt;ITuringConfig&gt;
 **Signature:**
 
 ```typescript
-list(extraParams?: \{
+list(extraParams?: {
         [key: string]: any;
-    \}): Promise<any>;
+    }): Promise<any>;
 ```
 
 ### Parameters
@@ -1225,7 +1223,7 @@ string
 
 </td><td>
 
-The default backend API server address.
+The default backend API server version.
 
 
 </td></tr>
@@ -1818,7 +1816,7 @@ onSavedAccessToken: (any: any) => void;
 
 > Warning: This API is now obsolete.
 > 
-> Run a model, please instead it of `runWithLambda`<></>.
+> Run a model, please instead it of `runWithLambda`.
 > 
 
 **Signature:**
@@ -1884,7 +1882,7 @@ const [result, runningModel, isRunningLoading] = useCoinferAction((params) => co
 
 > Warning: This API is now obsolete.
 > 
-> Run some models in batches, please instead it of `runWithLambda`<></>.
+> Run some models in batches, please instead it of `runWithLambda`.
 > 
 
 **Signature:**
@@ -1935,7 +1933,7 @@ Promise&lt;IModelRunInBatchResult&gt;
 
 ```javascript
 const res = await coinfer.model.run([
-  \{\}
+  {}
 ]);
 ```
 Alternatively, this method is invoked within useCoinferAction.
@@ -2225,10 +2223,10 @@ CoinferContext: any
 
 ### Example
 
-You can invoke it in `App.tsx` or `App.jsx`<></>.
+You can invoke it in `App.tsx` or `App.jsx`.
 
 ```jsx
-<CoinferContext.Provider value=\{\{ coinferjs: coinferjsInst \}\}>
+<CoinferContext.Provider value={{ coinferjs: coinferjsInst }}>
   <Outlet />
 </CoinferContext.Provider>
 ```
@@ -2250,7 +2248,7 @@ type ExperimentSocketActionTypes$1 =
   | IExperimentSocketExtraActionType$1
   | IExperimentErrorActionType$1
 ```
-**References:** IExperimentSocketPlotDataActionType$1<></>, IExperimentSocketLogActionType$1<></>, IExperimentSocketNamesActionType$1
+**References:** IExperimentSocketPlotDataActionType\$1, IExperimentSocketLogActionType\$1, IExperimentSocketNamesActionType\$1
 
 
 ## FetchFunctionReturnType type
@@ -2271,7 +2269,7 @@ type FetchFunctionReturnType$1<T> = [T | undefined, (...data: any[]) => Promise<
 ```typescript
 type FetchFunctionType$1 = <T = any>(cfAction: (...parms: any[]) => any, dependencies: any[]) => FetchFunctionReturnType$1<T>;
 ```
-**References:** FetchFunctionReturnType$1
+**References:** FetchFunctionReturnType\$1
 
 
 ## IExperimentSocketLogActionType.data property
@@ -2290,9 +2288,9 @@ The data type of the log information obtained from WebSocket.
 **Signature:**
 
 ```typescript
-interface IExperimentSocketLogActionType$1 extends IReduceActionWithKV$1<'experiment:output', \{data: string\}>
+interface IExperimentSocketLogActionType$1 extends IReduceActionWithKV$1<'experiment:output', {data: string}>
 ```
-**Extends:** IReduceActionWithKV$1&lt;'experiment:output', \{data: string\}&gt;
+**Extends:** IReduceActionWithKV\$1&lt;'experiment:output', \{data: string\}&gt;
 
 ### Properties
 
@@ -2353,9 +2351,9 @@ After establishing the connection on the backend (requiring version: '1.0'), the
 **Signature:**
 
 ```typescript
-interface IExperimentSocketNamesActionType$1 extends IReduceActionWithKV$1<'names', \{data: IChainNameType$1[]\}>
+interface IExperimentSocketNamesActionType$1 extends IReduceActionWithKV$1<'names', {data: IChainNameType$1[]}>
 ```
-**Extends:** IReduceActionWithKV$1&lt;'names', \{data: IChainNameType$1\[\]\}&gt;
+**Extends:** IReduceActionWithKV\$1&lt;'names', \{data: IChainNameType\$1\[\]\}&gt;
 
 ### Properties
 
@@ -2390,7 +2388,7 @@ data
 
 </td><td>
 
-IChainNameType$1\[\]
+IChainNameType\$1\[\]
 
 
 </td><td>
@@ -2405,7 +2403,7 @@ IChainNameType$1\[\]
 **Signature:**
 
 ```typescript
-data: \{[key: string]: any[]\}
+data: {[key: string]: any[]}
 ```
 
 
@@ -2416,9 +2414,9 @@ The plot data obtained from the WebSocket.
 **Signature:**
 
 ```typescript
-interface IExperimentSocketPlotDataActionType$1 extends IReduceActionWithKV$1<'experiment:event', \{data: \{[key: string]: any[]\}\}>
+interface IExperimentSocketPlotDataActionType$1 extends IReduceActionWithKV$1<'experiment:event', {data: {[key: string]: any[]}}>
 ```
-**Extends:** IReduceActionWithKV$1&lt;'experiment:event', \{data: \{\[key: string\]: any\[\]\}\}&gt;
+**Extends:** IReduceActionWithKV\$1&lt;'experiment:event', \{data: \{\[key: string\]: any\[\]\}\}&gt;
 
 ### Properties
 
@@ -2678,7 +2676,7 @@ useCoinferAction: FetchFunctionType
 
 ```
 const [models, fetchModels, isloading] = useCoinferAction(params => cf?.model.list(params.page_no, params.page_size), [cf]);
-fetchModels(\{page_no: 1, page_size: 10\});
+fetchModels({page_no: 1, page_size: 10});
 ```
 
 
@@ -2696,7 +2694,7 @@ useExperimentWebSocket: UseExperimentWebSocketType
 
 
 ```
-const \{ replaySubject, addWebSocketListener, removeWebSocketListener, send \} = useExperimentWebSocket(baseInfo.url, baseInfo.token);
+const { replaySubject, addWebSocketListener, removeWebSocketListener, send } = useExperimentWebSocket(baseInfo.url, baseInfo.token);
 ```
 
 

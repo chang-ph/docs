@@ -1,0 +1,20 @@
+---
+title: "Import Model From GitHub Repository Or Gist"
+---
+
+Steps to import a model from GitHub:
+
+1. The user logs in with a GitHub account (via Auth0).
+2. The user clicks the import model button.
+3. The web page requests the "list repository" API to obtain a list of the user's repositories and gists.
+4. The user selects a repository or gists.
+5. If the user selected a repository:
+   1. The web page requests the "list branches" API to obtain a list of the branches of the selected repository.
+   2. The user selects a branch.
+6. The web page requests the "import github" API to inform the backend to begin importing the specified repository/branch.
+7. The backend reads the repository/branch and creates a Unified Model Format struct as the model data. Some details are as follows:
+   1. Use the repository name as the model name.
+   2. Assume that the repository contains `Project.toml`.
+   3. Assume that the repository contains `main.jl` as the entrance file.
+   4. Assume that the entrance file contains a function named `model` as the entrance function.
+
