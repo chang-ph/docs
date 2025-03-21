@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-3-18 9:55:30
+update_time: 2025-3-20 18:55:53
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -1072,6 +1072,68 @@ _(Optional)_
 Promise&lt;any&gt;
 
 
+## Coinfer.listGithubBranches() method
+
+List all branches of the repository specified by the user(Log in with Github)
+
+**Signature:**
+
+```typescript
+listGithubBranches(repo: string): Promise<any>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+repo
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;any&gt;
+
+
+## Coinfer.listGithubReposAndGists() method
+
+List all repositories and Gists owned by the current user(Log in with Github).
+
+**Signature:**
+
+```typescript
+listGithubReposAndGists(): Promise<IGithubReposAndGists>;
+```
+**Returns:**
+
+Promise&lt;IGithubReposAndGists&gt;
+
+
 ## Coinfer.loadConfigFile() method
 
 **Signature:**
@@ -1582,6 +1644,34 @@ list(extraParams)
 
 
 </td><td>
+
+
+</td></tr>
+<tr><td>
+
+listGithubBranches(repo)
+
+
+</td><td>
+
+
+</td><td>
+
+List all branches of the repository specified by the user(Log in with Github)
+
+
+</td></tr>
+<tr><td>
+
+listGithubReposAndGists()
+
+
+</td><td>
+
+
+</td><td>
+
+List all repositories and Gists owned by the current user(Log in with Github).
 
 
 </td></tr>
