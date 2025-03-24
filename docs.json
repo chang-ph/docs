@@ -62,7 +62,9 @@
               "api-reference/categories/Experiment/get-mcmc-object-D{objid}",
               "api-reference/categories/Experiment/post-mcmc-object-D{objid}",
               "api-reference/categories/Experiment/delete-mcmc-object-D{objid}",
-              "api-reference/categories/Experiment/get-mcmc-object-{objid}-cloudwatch-logs"
+              "api-reference/categories/Experiment/get-mcmc-object-{objid}-cloudwatch-logs",
+              "api-reference/categories/Experiment/get-mcmc-experiment-{experiment_id}-sampledata-{fmt}",
+              "api-reference/categories/Experiment/get-mcmc-experiment-{expid}-notebook"
             ]
           },
           {
