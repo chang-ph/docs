@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-3-21 8:55:28
+update_time: 2025-3-21 14:48:38
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -423,14 +423,14 @@ any
 Promise&lt;unknown&gt;
 
 
-## Coinfer.createModelFromGithub() method
+## Coinfer.createModelFromGithubGist() method
 
-Create a model from GitHub repository/gist.
+Create a model from GitHub Gist.
 
 **Signature:**
 
 ```typescript
-createModelFromGithub(repo: string, branch: string, type: 'repo' | 'gist'): Promise<IGithubCreatedRes>;
+createModelFromGithubGist(id: string): Promise<IGithubCreatedRes>;
 ```
 
 ### Parameters
@@ -453,7 +453,55 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-repo
+id
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IGithubCreatedRes&gt;
+
+
+## Coinfer.createModelFromGithubRepo() method
+
+Create a model from GitHub repository.
+
+**Signature:**
+
+```typescript
+createModelFromGithubRepo(id: string, branch: string): Promise<IGithubCreatedRes>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+id
 
 
 </td><td>
@@ -473,20 +521,6 @@ branch
 </td><td>
 
 string
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-type
-
-
-</td><td>
-
-'repo' | 'gist'
 
 
 </td><td>
@@ -1575,7 +1609,7 @@ create(payload)
 </td></tr>
 <tr><td>
 
-createModelFromGithub(repo, branch, type)
+createModelFromGithubGist(id)
 
 
 </td><td>
@@ -1583,7 +1617,21 @@ createModelFromGithub(repo, branch, type)
 
 </td><td>
 
-Create a model from GitHub repository/gist.
+Create a model from GitHub Gist.
+
+
+</td></tr>
+<tr><td>
+
+createModelFromGithubRepo(id, branch)
+
+
+</td><td>
+
+
+</td><td>
+
+Create a model from GitHub repository.
 
 
 </td></tr>
