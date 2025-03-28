@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-3-24 8:20:52
+update_time: 2025-3-26 9:21:17
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -430,7 +430,7 @@ Create a model from GitHub Gist.
 **Signature:**
 
 ```typescript
-createModelFromGithubGist(id: string, modelName: string): Promise<IGithubCreatedRes>;
+createModelFromGithubGist(repo: string, modelName: string): Promise<IGithubCreatedRes>;
 ```
 
 ### Parameters
@@ -453,7 +453,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-id
+repo
 
 
 </td><td>
@@ -492,7 +492,7 @@ Create a model from GitHub repository.
 **Signature:**
 
 ```typescript
-createModelFromGithubRepo(id: string, branch: string, modelName: string): Promise<IGithubCreatedRes>;
+createModelFromGithubRepo(repo: string, branch: string, modelName: string): Promise<IGithubCreatedRes>;
 ```
 
 ### Parameters
@@ -515,7 +515,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-id
+repo
 
 
 </td><td>
@@ -1637,7 +1637,7 @@ create(payload)
 </td></tr>
 <tr><td>
 
-createModelFromGithubGist(id, modelName)
+createModelFromGithubGist(repo, modelName)
 
 
 </td><td>
@@ -1651,7 +1651,7 @@ Create a model from GitHub Gist.
 </td></tr>
 <tr><td>
 
-createModelFromGithubRepo(id, branch, modelName)
+createModelFromGithubRepo(repo, branch, modelName)
 
 
 </td><td>
