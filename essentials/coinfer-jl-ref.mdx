@@ -28,7 +28,7 @@ Contains data used when running model in cloud. New models won&#39;t be saved in
   
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L240)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L240)
 
 
 
@@ -59,7 +59,7 @@ Contains data used when running model in cloud. New models will be saved in the 
   
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L197)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L197)
 
 
 
@@ -84,7 +84,7 @@ There are three endpoints which may be same or not:
   
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L108-L114)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L108-L114)
 
 
 
@@ -102,7 +102,7 @@ Endpoints(common_value)
 
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L124-L128)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L124-L128)
 
 
 
@@ -133,7 +133,7 @@ Contains data used when running model locally.
   
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L144)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L144)
 
 
 
@@ -169,7 +169,7 @@ Only simple arguments that can be serialized and deserialized using JSON directl
 The return value of the entrance_func will be printed to stdout when executed locally, or it will be sent to the experiment logs when run remotely. It is essential to ensure that the return value contains only simple data structures that can be serialized using JSON.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L1090-L1108)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L1090-L1108)
 
 
 
@@ -221,7 +221,7 @@ sample(
   
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/ServerlessBayes.jl#L790-L809)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/ServerlessBayes.jl#L790-L809)
 
 
 
@@ -240,7 +240,7 @@ Experiment
 Select experiment on the server. Generally, an experiment is created by calling `create_experiment` rather than constructed explicitly.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L35-L39)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L35-L39)
 
 
 
@@ -257,7 +257,7 @@ Logger
 Withdata&#39;s Logger, which sends sample data onto the server.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L45-L49)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L45-L49)
 
 
 
@@ -274,7 +274,7 @@ Server("http://dev.withdata.io")
 The type represents a Withdata Server.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L16-L20)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L16-L20)
 
 
 
@@ -291,7 +291,7 @@ User(server, "an_authentication_token")
 Specify which user to use on the server. The authentication token can be found on the user profile page on the server.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L25-L29)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L25-L29)
 
 
 
@@ -308,7 +308,7 @@ fetch(xp::Experiment) -> Experiment
 Fetch the sample data and log of the given experiment from the server.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L194-L198)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L194-L198)
 
 
 
@@ -325,7 +325,7 @@ create_experiment(user) -> Experiment
 Create a new experiment on the server. With an experiment, one can create a `Logger`, which delivers the sample data to that experiment.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L175-L180)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L175-L180)
 
 
 
@@ -342,7 +342,7 @@ experiments(user) -> [Experiment]
 Get all experiments on the server for the user.
 
 
-[source](https://github.com/vectorly-ai/server/blob/3440ce214ffd6f025eb3707619c17d4300b5461f/client/Coinfer.jl/src/CoinferLogger.jl#L211-L215)
+[source](https://github.com/vectorly-ai/server/blob/b3c7e1a07268aaf424d9ec187edbecd8600558b8/client/Coinfer.jl/src/CoinferLogger.jl#L211-L215)
 
 
 
