@@ -81,6 +81,14 @@
             ]
           },
           {
+            "group": "Notification",
+            "pages": [
+              "api-reference/categories/Notification/introduction",
+              "api-reference/categories/Notification/get-api-notification",
+              "api-reference/categories/Notification/post-api-notification-mark"
+            ]
+          },
+          {
             "group": "Authorization",
             "pages": [
               "api-reference/categories/Authorization/introduction",
@@ -95,14 +103,6 @@
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
               "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
               "api-reference/categories/Authorization/post-base-update"
-            ]
-          },
-          {
-            "group": "Notification",
-            "pages": [
-              "api-reference/categories/Notification/introduction",
-              "api-reference/categories/Notification/get-api-notification",
-              "api-reference/categories/Notification/post-api-notification-mark"
             ]
           }
         ]
