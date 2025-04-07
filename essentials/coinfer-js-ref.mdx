@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-4-1 16:58:19
+update_time: 2025-4-6 19:23:8
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -882,6 +882,54 @@ _(Optional)_
 Promise&lt;unknown&gt;
 
 
+## Coinfer.getColabLink() method
+
+Get the colab link of the Experiment.
+
+**Signature:**
+
+```typescript
+getColabLink(experimentId: string): Promise<IColabURLRes>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+experimentId
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IColabURLRes&gt;
+
+
 ## Coinfer.getExperimentStatus() method
 
 Get the status infomation of the Experiment.
@@ -1728,6 +1776,20 @@ get(props, extraParams)
 
 
 </td><td>
+
+
+</td></tr>
+<tr><td>
+
+getColabLink(experimentId)
+
+
+</td><td>
+
+
+</td><td>
+
+Get the colab link of the Experiment.
 
 
 </td></tr>
