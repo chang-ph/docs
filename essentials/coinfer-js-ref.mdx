@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-4-7 9:9:14
+update_time: 2025-4-7 19:46:7
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -992,6 +992,68 @@ Partial&lt;ICoinferReqExtraParams&gt;
 Promise&lt;any&gt;
 
 
+## Coinfer.getNotifications() method
+
+get the notification list.
+
+**Signature:**
+
+```typescript
+getNotifications(status: NotificationStatusType | 'all', pageConfig: IPagingParams): Promise<ICommonResWithStatus<NotificationWithPagation>>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+status
+
+
+</td><td>
+
+NotificationStatusType | 'all'
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+pageConfig
+
+
+</td><td>
+
+IPagingParams
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ICommonResWithStatus&lt;NotificationWithPagation&gt;&gt;
+
+
 ## Coinfer.getSharedInfo() method
 
 Get the shared information of the Model/Experiment, such as whether a password is required
@@ -1385,6 +1447,68 @@ Promise&lt;ISuperLogsType&gt;
 ```javascript
 const data = await coinfer.experiment.logs(experimentId);
 ```
+
+
+## Coinfer.markNotificationAs() method
+
+mark the notification as read or unread.
+
+**Signature:**
+
+```typescript
+markNotificationAs(notificationIds: string[], status: NotificationStatusType): Promise<ICommonResWithStatus<any>>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+notificationIds
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+status
+
+
+</td><td>
+
+NotificationStatusType
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;ICommonResWithStatus&lt;any&gt;&gt;
 
 
 ## Coinfer class
@@ -1809,6 +1933,20 @@ Get the status infomation of the Experiment.
 </td></tr>
 <tr><td>
 
+getNotifications(status, pageConfig)
+
+
+</td><td>
+
+
+</td><td>
+
+get the notification list.
+
+
+</td></tr>
+<tr><td>
+
 getSharedInfo(type, shareId)
 
 
@@ -1926,6 +2064,20 @@ logs(id)
 </td><td>
 
 Show the detailed logs (only for superuser).
+
+
+</td></tr>
+<tr><td>
+
+markNotificationAs(notificationIds, status)
+
+
+</td><td>
+
+
+</td><td>
+
+mark the notification as read or unread.
 
 
 </td></tr>

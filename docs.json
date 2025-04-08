@@ -35,6 +35,17 @@
             ]
           },
           {
+            "group": "Object",
+            "pages": [
+              "api-reference/categories/Object/introduction",
+              "api-reference/categories/Object/get-api-object",
+              "api-reference/categories/Object/post-api-object",
+              "api-reference/categories/Object/delete-api-object",
+              "api-reference/categories/Object/get-api-object-{objid}",
+              "api-reference/categories/Object/post-api-object-{objid}"
+            ]
+          },
+          {
             "group": "Model",
             "pages": [
               "api-reference/categories/Model/introduction",
