@@ -179,6 +179,8 @@
         },
         "security": [
           {
+          },
+          {
             "DummyAuth": []
           },
           {
