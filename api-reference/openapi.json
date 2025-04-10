@@ -179,7 +179,7 @@
         },
         "security": [
           {
-            "SharingAuth": []
+            "DummyAuth": []
           },
           {
             "GlobalAuth": []
@@ -5324,6 +5324,11 @@
       }
     },
     "securitySchemes": {
+      "DummyAuth": {
+        "type": "apiKey",
+        "name": "api_key",
+        "in": "header"
+      },
       "GlobalAuth": {
         "type": "http",
         "scheme": "bearer"
