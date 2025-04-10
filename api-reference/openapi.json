@@ -180,6 +180,9 @@
         "security": [
           {
             "GlobalAuth": []
+          },
+          {
+            "ViewShareAuth": []
           }
         ]
       }
