@@ -180,9 +180,6 @@
         "security": [
           {
             "GlobalAuth": []
-          },
-          {
-            "ViewShareAuth": []
           }
         ]
       }
@@ -2331,7 +2328,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SuccRsp_Union_ExperimentRsp__ListModelsRspItem__"
+                  "$ref": "#/components/schemas/SuccRsp_Union_ExperimentRsp__ListModelsRspItem__CreateExperimentShareRsp__"
                 }
               }
             }
@@ -2471,6 +2468,9 @@
           {
           },
           {
+            "GlobalAuth": []
+          },
+          {
             "SharingAuth": []
           }
         ]
@@ -2529,6 +2529,48 @@
           {
             "GlobalAuth": []
           }
+        ]
+      }
+    },
+    "/api/object/share/{share_id}": {
+      "get": {
+        "operationId": "coinfer_apis_no_auth_api_get_experiment_share",
+        "summary": "Get sharing information of an experiment.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "share_id",
+            "schema": {
+              "title": "Share Id",
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuccRsp_GetExperimentShareRsp_"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrRsp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Share"
         ]
       }
     }
@@ -2864,7 +2906,7 @@
             "type": "string"
           },
           "expire": {
-            "default": "2025-04-17T02:59:54.471019Z",
+            "default": "2025-04-17T06:22:46.962327Z",
             "format": "date-time",
             "title": "Expire",
             "type": "string"
@@ -5069,7 +5111,7 @@
         "title": "ExperimentRsp",
         "type": "object"
       },
-      "SuccRsp_Union_ExperimentRsp__ListModelsRspItem__": {
+      "SuccRsp_Union_ExperimentRsp__ListModelsRspItem__CreateExperimentShareRsp__": {
         "properties": {
           "status": {
             "const": "ok",
@@ -5082,6 +5124,9 @@
               },
               {
                 "$ref": "#/components/schemas/ListModelsRspItem"
+              },
+              {
+                "$ref": "#/components/schemas/CreateExperimentShareRsp"
               }
             ],
             "title": "Data"
@@ -5091,7 +5136,7 @@
           "status",
           "data"
         ],
-        "title": "SuccRsp[Union[ExperimentRsp, ListModelsRspItem]]",
+        "title": "SuccRsp[Union[ExperimentRsp, ListModelsRspItem, CreateExperimentShareRsp]]",
         "type": "object"
       },
       "CreateExperiment": {
@@ -5359,9 +5404,7 @@
         "type": "http",
         "scheme": "bearer"
       },
-      "ViewShareAuth": {
-        "type": "http"
-      }
+      "ViewShareAuth": {}
     }
   },
   "servers": [
