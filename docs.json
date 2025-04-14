@@ -88,7 +88,8 @@
               "api-reference/categories/Share/get-turing-model-share-{share_id}",
               "api-reference/categories/Share/post-mcmc-experiment-{exp_id}-share",
               "api-reference/categories/Share/delete-mcmc-experiment-share-{share_id}",
-              "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}"
+              "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}",
+              "api-reference/categories/Share/get-api-object-share-{share_id}"
             ]
           },
           {
