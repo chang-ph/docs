@@ -72,9 +72,6 @@
               "api-reference/categories/Share/post-turing-model-{model_id}-share",
               "api-reference/categories/Share/delete-turing-model-share-{share_id}",
               "api-reference/categories/Share/get-turing-model-share-{share_id}",
-              "api-reference/categories/Share/post-mcmc-experiment-{exp_id}-share",
-              "api-reference/categories/Share/delete-mcmc-experiment-share-{share_id}",
-              "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}",
               "api-reference/categories/Share/get-api-object-share-{share_id}"
             ]
           },
@@ -99,8 +96,7 @@
               "api-reference/categories/Authorization/get-base-user-tokens",
               "api-reference/categories/Authorization/post-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/post-base-update"
+              "api-reference/categories/Authorization/delete-base-user-token-{token_id}"
             ]
           }
         ]
