@@ -96,7 +96,8 @@
               "api-reference/categories/Authorization/get-base-user-tokens",
               "api-reference/categories/Authorization/post-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/delete-base-user-token-{token_id}"
+              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/post-base-update"
             ]
           }
         ]

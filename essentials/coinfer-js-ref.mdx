@@ -1,7 +1,7 @@
 ---
 title: "Reference"
 hide_title: true
-update_time: 2025-4-29 16:11:15
+update_time: 2025-5-5 16:42:21
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -1116,6 +1116,68 @@ string
 Promise&lt;SharedInfoMaps | null&gt;
 
 
+## Coinfer.getSharedList() method
+
+Get a list of Models and Experiments to share.
+
+**Signature:**
+
+```typescript
+getSharedList<T extends keyof (SharedGetReturnMaps & ToMeSharedCreateMaps)>(type: T, pageConfig: IPagingParams): Promise<IMCMCPagingType<(SharedGetReturnMaps & ToMeSharedCreateMaps)[T]> | null>;
+```
+
+### Parameters
+
+<table><thead><tr><th>
+
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+pageConfig
+
+
+</td><td>
+
+IPagingParams
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
+
+Promise&lt;IMCMCPagingType&lt;(SharedGetReturnMaps & ToMeSharedCreateMaps)\[T\]&gt; | null&gt;
+
+
 ## Coinfer.getSharedModel() method
 
 Get the shared information of the Model.
@@ -1894,6 +1956,20 @@ getSharedInfo(type, shareId)
 </td><td>
 
 Get the shared information of the Model/Experiment, such as whether a password is required
+
+
+</td></tr>
+<tr><td>
+
+getSharedList(type, pageConfig)
+
+
+</td><td>
+
+
+</td><td>
+
+Get a list of Models and Experiments to share.
 
 
 </td></tr>
