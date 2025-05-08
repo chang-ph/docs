@@ -49,16 +49,30 @@
             "group": "Model",
             "pages": [
               "api-reference/categories/Model/introduction",
+              "api-reference/categories/Model/get-turing-object",
+              "api-reference/categories/Model/delete-turing-object",
+              "api-reference/categories/Model/post-turing-object",
+              "api-reference/categories/Model/post-turing-object-{objid}",
+              "api-reference/categories/Model/get-turing-object-{objid}",
               "api-reference/categories/Model/get-turing-object-{objid}-share-{share_id}",
               "api-reference/categories/Model/get-turing-config",
               "api-reference/categories/Model/get-turing-github-repository",
-              "api-reference/categories/Model/get-turing-github-branch"
+              "api-reference/categories/Model/get-turing-github-branch",
+              "api-reference/categories/Model/post-turing-github-model"
             ]
           },
           {
             "group": "Experiment",
             "pages": [
               "api-reference/categories/Experiment/introduction",
+              "api-reference/categories/Experiment/get-mcmc-object",
+              "api-reference/categories/Experiment/post-mcmc-object",
+              "api-reference/categories/Experiment/delete-mcmc-object",
+              "api-reference/categories/Experiment/get-mcmc-object-X{objid}",
+              "api-reference/categories/Experiment/post-mcmc-object-X{objid}",
+              "api-reference/categories/Experiment/get-mcmc-object-D{objid}",
+              "api-reference/categories/Experiment/post-mcmc-object-D{objid}",
+              "api-reference/categories/Experiment/delete-mcmc-object-D{objid}",
               "api-reference/categories/Experiment/get-mcmc-object-{objid}-cloudwatch-logs",
               "api-reference/categories/Experiment/get-mcmc-experiment-{experiment_id}-sampledata-{fmt}",
               "api-reference/categories/Experiment/get-mcmc-experiment-{expid}-notebook",
@@ -72,6 +86,9 @@
               "api-reference/categories/Share/post-turing-model-{model_id}-share",
               "api-reference/categories/Share/delete-turing-model-share-{share_id}",
               "api-reference/categories/Share/get-turing-model-share-{share_id}",
+              "api-reference/categories/Share/post-mcmc-experiment-{exp_id}-share",
+              "api-reference/categories/Share/delete-mcmc-experiment-share-{share_id}",
+              "api-reference/categories/Share/get-mcmc-experiment-share-{share_id}",
               "api-reference/categories/Share/get-api-object-share-{share_id}"
             ]
           },
@@ -96,7 +113,8 @@
               "api-reference/categories/Authorization/get-base-user-tokens",
               "api-reference/categories/Authorization/post-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/delete-base-user-token-{token_id}"
+              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
+              "api-reference/categories/Authorization/post-base-update"
             ]
           }
         ]
