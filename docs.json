@@ -60,7 +60,7 @@
             "pages": [
               "api-reference/categories/Experiment/introduction",
               "api-reference/categories/Experiment/get-mcmc-object-{objid}-cloudwatch-logs",
-              "api-reference/categories/Experiment/get-mcmc-experiment-{experiment_id}-sampledata-{fmt}",
+              "api-reference/categories/Experiment/get-mcmc-experiment-{expid}-notebook",
               "api-reference/categories/Experiment/get-mcmc-experiment-{expid}-notebook-colab"
             ]
           },
