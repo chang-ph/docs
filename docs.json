@@ -49,7 +49,6 @@
             "group": "Model",
             "pages": [
               "api-reference/categories/Model/introduction",
-              "api-reference/categories/Model/get-turing-object-{objid}-share-{share_id}",
               "api-reference/categories/Model/get-turing-config",
               "api-reference/categories/Model/get-turing-github-repository",
               "api-reference/categories/Model/get-turing-github-branch"
@@ -67,9 +66,6 @@
             "group": "Share",
             "pages": [
               "api-reference/categories/Share/introduction",
-              "api-reference/categories/Share/post-turing-model-{model_id}-share",
-              "api-reference/categories/Share/delete-turing-model-share-{share_id}",
-              "api-reference/categories/Share/get-turing-model-share-{share_id}",
               "api-reference/categories/Share/get-api-object-share-{share_id}"
             ]
           },
