@@ -46,6 +46,15 @@
             ]
           },
           {
+            "group": "System",
+            "pages": [
+              "api-reference/categories/System/introduction",
+              "api-reference/categories/System/get-sys-colab",
+              "api-reference/categories/System/get-sys-github-repository",
+              "api-reference/categories/System/get-sys-github-branch"
+            ]
+          },
+          {
             "group": "Model",
             "pages": [
               "api-reference/categories/Model/introduction",
