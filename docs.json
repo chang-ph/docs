@@ -60,7 +60,8 @@
               "api-reference/categories/Model/introduction",
               "api-reference/categories/Model/get-turing-config",
               "api-reference/categories/Model/get-turing-github-repository",
-              "api-reference/categories/Model/get-turing-github-branch"
+              "api-reference/categories/Model/get-turing-github-branch",
+              "api-reference/categories/Model/get-sys-config"
             ]
           },
           {
