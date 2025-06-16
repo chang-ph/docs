@@ -56,18 +56,6 @@
             ]
           },
           {
-            "group": "Model",
-            "pages": [
-              "api-reference/categories/Model/introduction"
-            ]
-          },
-          {
-            "group": "Experiment",
-            "pages": [
-              "api-reference/categories/Experiment/introduction"
-            ]
-          },
-          {
             "group": "Share",
             "pages": [
               "api-reference/categories/Share/introduction",
