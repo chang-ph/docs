@@ -50,7 +50,6 @@
             "pages": [
               "api-reference/categories/System/introduction",
               "api-reference/categories/System/get-sys-config",
-              "api-reference/categories/System/get-sys-colab",
               "api-reference/categories/System/get-sys-github-repository",
               "api-reference/categories/System/get-sys-github-branch",
               "api-reference/categories/System/get-sys-github-repo-files",
@@ -84,8 +83,8 @@
               "api-reference/categories/Authorization/post-base-logout",
               "api-reference/categories/Authorization/get-base-user-tokens",
               "api-reference/categories/Authorization/post-base-user-tokens",
+              "api-reference/categories/Authorization/delete-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
-              "api-reference/categories/Authorization/delete-base-user-token-{token_id}",
               "api-reference/categories/Authorization/post-base-code2token",
               "api-reference/categories/Authorization/get-base-access_token",
               "api-reference/categories/Authorization/get-base-linked-account",
