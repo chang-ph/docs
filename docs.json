@@ -50,10 +50,7 @@
             "pages": [
               "api-reference/categories/System/introduction",
               "api-reference/categories/System/get-sys-config",
-              "api-reference/categories/System/get-sys-github-repository",
-              "api-reference/categories/System/get-sys-github-branch",
-              "api-reference/categories/System/get-sys-github-repo-files",
-              "api-reference/categories/System/get-sys-github-gist-files"
+              "api-reference/categories/System/get-sys-demo"
             ]
           },
           {
