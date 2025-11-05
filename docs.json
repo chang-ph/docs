@@ -51,8 +51,7 @@
               "api-reference/categories/System/introduction",
               "api-reference/categories/System/get-sys-config",
               "api-reference/categories/System/get-sys-gallery",
-              "api-reference/categories/System/post-sys-plot",
-              "api-reference/categories/System/get-sys-download-workflow"
+              "api-reference/categories/System/post-sys-plot"
             ]
           },
           {
