@@ -42,7 +42,8 @@
               "api-reference/categories/Object/post-api-object",
               "api-reference/categories/Object/delete-api-object",
               "api-reference/categories/Object/get-api-object-{objid}",
-              "api-reference/categories/Object/post-api-object-{objid}"
+              "api-reference/categories/Object/post-api-object-{objid}",
+              "api-reference/categories/Object/delete-api-object-{objid}"
             ]
           },
           {
