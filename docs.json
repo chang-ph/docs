@@ -38,13 +38,19 @@
             "group": "Object",
             "pages": [
               "api-reference/categories/Object/introduction",
-              "api-reference/categories/Object/post-command",
-              "api-reference/categories/Object/get-api-object",
               "api-reference/categories/Object/post-api-object",
-              "api-reference/categories/Object/delete-api-object",
+              "api-reference/categories/Object/get-api-object",
               "api-reference/categories/Object/get-api-object-{objid}",
               "api-reference/categories/Object/post-api-object-{objid}",
+              "api-reference/categories/Object/delete-api-object",
               "api-reference/categories/Object/delete-api-object-{objid}"
+            ]
+          },
+          {
+            "group": "Command",
+            "pages": [
+              "api-reference/categories/Command/introduction",
+              "api-reference/categories/Command/post-command"
             ]
           },
           {
@@ -97,13 +103,6 @@
         "pages": [
           "essentials/coinfer-jl",
           "essentials/coinfer-jl-ref"
-        ]
-      },
-      {
-        "tab": "Coinfer.js",
-        "pages": [
-          "essentials/coinfer-js-ref",
-          "essentials/coinfer-js"
         ]
       },
       {
