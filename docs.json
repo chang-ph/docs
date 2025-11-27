@@ -38,7 +38,6 @@
             "group": "Object",
             "pages": [
               "api-reference/categories/Object/introduction",
-              "api-reference/categories/Object/post-command",
               "api-reference/categories/Object/get-api-object",
               "api-reference/categories/Object/post-api-object",
               "api-reference/categories/Object/delete-api-object",
@@ -97,13 +96,6 @@
         "pages": [
           "essentials/coinfer-jl",
           "essentials/coinfer-jl-ref"
-        ]
-      },
-      {
-        "tab": "Coinfer.js",
-        "pages": [
-          "essentials/coinfer-js-ref",
-          "essentials/coinfer-js"
         ]
       },
       {
