@@ -99,13 +99,6 @@
         ]
       },
       {
-        "tab": "Coinfer.jl",
-        "pages": [
-          "essentials/coinfer-jl",
-          "essentials/coinfer-jl-ref"
-        ]
-      },
-      {
         "tab": "Changelog",
         "pages": [
           "essentials/changelog"
