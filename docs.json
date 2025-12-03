@@ -47,9 +47,10 @@
             ]
           },
           {
-            "group": "Command",
+            "group": "Invoke",
             "pages": [
-              "api-reference/categories/Command/introduction"
+              "api-reference/categories/Invoke/introduction",
+              "api-reference/categories/Invoke/post-invoke"
             ]
           },
           {
