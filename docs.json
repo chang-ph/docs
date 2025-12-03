@@ -49,8 +49,7 @@
           {
             "group": "Command",
             "pages": [
-              "api-reference/categories/Command/introduction",
-              "api-reference/categories/Command/post-command"
+              "api-reference/categories/Command/introduction"
             ]
           },
           {
