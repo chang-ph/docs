@@ -18,14 +18,6 @@
         ]
       },
       {
-        "tab": "Coinfer Cloud",
-        "pages": [
-          "essentials/ws-api",
-          "essentials/proxylambda",
-          "essentials/samle-data-handling"
-        ]
-      },
-      {
         "tab": "Server API",
         "groups": [
           {
