@@ -13,8 +13,7 @@
       {
         "tab": "Getting started",
         "pages": [
-          "essentials/quickstart",
-          "essentials/import-model-from-repo-gist"
+          "essentials/quickstart"
         ]
       },
       {
