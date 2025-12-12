@@ -12,7 +12,6 @@ First, let's create a token in the Coinfer website:
 1. Sign in.
 1. Click the "key" icon near the bottom left corner.
 1. Create a token.
-1. Set you `COINFER_AUTH_TOKEN` environment variable to the new token created: `export COINFER_AUTH_TOKEN=<newtoken>`
 
 ## Create Workflow
 
@@ -28,13 +27,13 @@ Click the "import an example" link the the top of the page. A menu will be displ
 To create a workflow manually, follow these steps:
 
 1. click "Attach model" and either import an extenal model from GitHub or create a new model by opening the model editor.
-2. click "Attach data" if your model requires some data to run.
-3. Click "Run" to run you model, an Experiment will be generated in which you can visualize your MCMC data.
-4. In case you want to use a script to analyze you MCMC data, you can click "Attach Analyzer" to add an analyzer to the workflow. Then you can run the analyzer and view it's output.
+1. click "Attach data" if your model requires some data to run.
+1. Click "Run" to run you model, an Experiment will be generated in which you can visualize your MCMC data.
+1. In case you want to use a script to analyze you MCMC data, you can click "Attach Analyzer" to add an analyzer to the workflow. Then you can run the analyzer and view it's output.
 
 ## Run workflow
 
-After you created a Workflow, you can run it in Coinfer by clicking the "Run" button in Workflow > Experiment box.
+After you created a Workflow, you can run it in Coinfer by clicking the "Run" button in Workflow->Experiment box.
 
 You can also download the workflow to you computer and run it locally. Click the "Down arrow" button at the top of workflow page.
 All the code and data of the workflow will be downloaded as a zip package.
@@ -45,4 +44,6 @@ All the code and data of the workflow will be downloaded as a zip package.
 1. Install Python if you haven't installed it: `uv python install 3.11`
 1. Install Julia if you haven't installed it: `curl -fsSL https://install.julialang.org | sh`
 1. Install Python dependencies and activate the the virtual environment: `uv sync && source .venv/bin/activate`
+1. Set your token: `inv login --token <you token>
 1. Run sample: `inv sample`
+1. Run analzer: `inv analyze`
