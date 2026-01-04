@@ -47,9 +47,7 @@
           {
             "group": "System",
             "pages": [
-              "api-reference/categories/System/introduction",
-              "api-reference/categories/System/get-sys-config",
-              "api-reference/categories/System/get-sys-gallery"
+              "api-reference/categories/System/introduction"
             ]
           },
           {
@@ -71,7 +69,6 @@
             "group": "Authorization",
             "pages": [
               "api-reference/categories/Authorization/introduction",
-              "api-reference/categories/Authorization/get-base-auth0-config",
               "api-reference/categories/Authorization/post-base-auth0-login",
               "api-reference/categories/Authorization/post-base-login",
               "api-reference/categories/Authorization/get-base-user",
