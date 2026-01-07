@@ -45,12 +45,6 @@
             ]
           },
           {
-            "group": "System",
-            "pages": [
-              "api-reference/categories/System/introduction"
-            ]
-          },
-          {
             "group": "Share",
             "pages": [
               "api-reference/categories/Share/introduction",
