@@ -47,8 +47,7 @@
           {
             "group": "Share",
             "pages": [
-              "api-reference/categories/Share/introduction",
-              "api-reference/categories/Share/get-api-object-share-{share_id}"
+              "api-reference/categories/Share/introduction"
             ]
           },
           {
