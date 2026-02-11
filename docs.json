@@ -66,7 +66,6 @@
               "api-reference/categories/Authorization/delete-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
               "api-reference/categories/Authorization/post-base-code2token",
-              "api-reference/categories/Authorization/get-base-access_token2",
               "api-reference/categories/Authorization/get-base-access_token",
               "api-reference/categories/Authorization/get-base-linked-account",
               "api-reference/categories/Authorization/delete-base-linked-account"

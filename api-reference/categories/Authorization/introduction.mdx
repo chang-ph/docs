@@ -2,3 +2,90 @@
 title: "Introduction"
 ---
 # Authorization
+
+This group contains APIs related to authorization:
+
+1. Login/Logout
+2. User info management
+3. Token Management
+
+## Login/Logout
+
+We support login with user password. But for most users, we recommend to use OAuth integration.
+
+Example of login with password:
+
+```python
+requests.post(
+    f"{root}/base/login",
+    headers={"Authorization": f"Basic {token}"},
+    json={"username": "user@example.com", "password": "password123"},
+)
+```
+
+Logout:
+
+```python
+requests.post(
+    f"{root}/base/logout",
+    headers={"Authorization": f"Basic {token}"},
+)
+```
+
+## User info management
+
+Get detailed information of the current logined user.
+
+Example:
+
+```python
+requests.get(
+    f"{root}/base/user",
+    headers={"Authorization": f"Bearer {token}"},
+)
+```
+
+Modify current user's password:
+
+```python
+requests.post(
+    f"{root}/base/user",
+    headers={"Authorization": f"Bearer {token}"},
+    json={"password": "password123", "new_password": "new_password123"},
+)
+```
+
+## Token Management
+
+List tokens of current user
+
+```python
+requests.get(
+    f"{root}/base/user/tokens",
+    headers={"Authorization": f"Bearer {token}"},
+)
+```
+
+Create new token
+
+```python
+requests.post(
+    f"{root}/base/user/tokens",
+    headers={"Authorization": f"Bearer {token}"},
+    json={
+        "name": "token name",
+        "desc": "this is a new  token",
+        "expire": "2023-11-07T05:31:56Z"
+    },
+)
+```
+
+Delete token by ID
+
+```python
+requests.delete(
+    f"{root}/base/user/tokens",
+    params={"tokens": [token_id]}
+    headers={"Authorization": f"Bearer {token}"},
+)
+```
