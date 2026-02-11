@@ -45,21 +45,6 @@
             ]
           },
           {
-            "group": "System",
-            "pages": [
-              "api-reference/categories/System/introduction",
-              "api-reference/categories/System/get-sys-config",
-              "api-reference/categories/System/get-sys-gallery"
-            ]
-          },
-          {
-            "group": "Share",
-            "pages": [
-              "api-reference/categories/Share/introduction",
-              "api-reference/categories/Share/get-api-object-share-{share_id}"
-            ]
-          },
-          {
             "group": "Notification",
             "pages": [
               "api-reference/categories/Notification/introduction",
@@ -71,7 +56,6 @@
             "group": "Authorization",
             "pages": [
               "api-reference/categories/Authorization/introduction",
-              "api-reference/categories/Authorization/get-base-auth0-config",
               "api-reference/categories/Authorization/post-base-auth0-login",
               "api-reference/categories/Authorization/post-base-login",
               "api-reference/categories/Authorization/get-base-user",
@@ -82,6 +66,7 @@
               "api-reference/categories/Authorization/delete-base-user-tokens",
               "api-reference/categories/Authorization/put-base-user-token-{token_id}",
               "api-reference/categories/Authorization/post-base-code2token",
+              "api-reference/categories/Authorization/get-base-access_token2",
               "api-reference/categories/Authorization/get-base-access_token",
               "api-reference/categories/Authorization/get-base-linked-account",
               "api-reference/categories/Authorization/delete-base-linked-account"

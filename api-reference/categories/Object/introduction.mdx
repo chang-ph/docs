@@ -3,4 +3,90 @@ title: "Introduction"
 ---
 # Object
 
-APIs related to object CRUD operations.
+These APIs are used to manage objects in the Coinfer. The supported object types are:
+
+- workflow
+- cloudfunction
+- experiment
+- data
+- share
+
+When you want to create an object, you should call `POST /api/object` API. The request body should contain an `object_type` field which specifies the type of the object to create.
+
+Usually you need to create a workflow first. So you make a call like this:
+
+```python
+requests.post(f"{root}/api/object", headers={"Authorization": f"Bearer {token}"}, json={"payload": {"object_type": "workflow"}})
+```
+
+There are many ways to create a workflow. If you create a workflow like the above, you would get an empty workflow. You need to add things to it later.
+
+Alternatively, you can create a workflow from our predefine data. You can get the available predefined workflow from this file: https://coinfer.ai/gallery/example-models.json
+
+Let's use the "africa" model from it as an example. You create a workflow from it like this:
+
+```python
+requests.post(f"{root}/api/object", headers={"Authorization": f"Bearer {token}"}, json={"payload": {"object_type": "workflow", "uri": "https://vectorly-ai.github.io/gallery/gallery/statistical_rethinking/africa.zip"}})
+```
+
+If everything goes well, you would get a workflow_id for the workflow. You can use this workflow_id to refer to the workflow in other APIs.
+
+You can get the workflow details like this:
+
+```python
+requests.get(f"{root}/api/object/{workflow_id}", headers={"Authorization": f"Bearer {token}"})
+```
+
+Or you can delete the workflow like this:
+
+```python
+requests.delete(f"{root}/api/object/{workflow_id}", headers={"Authorization": f"Bearer {token}"})
+```
+
+Now let's run the workflow. You can run the workflow like this:
+
+```python
+requests.post(f"{root}/invoke", headers={"Authorization": f"Bearer {token}"}, json={"target": workflow_id, "action": "run_sample", "get_response": True})
+```
+
+As we specify "get_response: true", we would get the response data from this API. The response data would contain an experiment ID. When a workflow runs, it would create an experiment. You can use this experiment ID to get the experiment details.
+
+
+```python
+requests.get(f"{root}/api/object/{experiment_id}", headers={"Authorization": f"Bearer {token}"})
+```
+
+You may then attach an **analyzer** to the workflow and run the analyzer to do something with the experiment data. An analyzer is a cloudfunction that contain non-model code.
+
+You can create an analyzer like this:
+
+```python
+analyzer_code = """..."""
+encoded_analyzer_code = base64.b64encode(analyzer_code.encode("utf-8")).decode("utf-8")
+payload = {
+    "payload": {
+        "object_type": "model",
+        "name": "my analyzer",
+        "tags": ["code"],
+        "entrance_file": "main.py",
+        "content": {
+            "tree": [
+                {
+                    "name": "main.py",
+                    "type": "file",
+                    "content": encoded_analyzer_code
+                }
+            ]
+        }
+    }
+}
+requests.post(f"{root}/api/object", headers={"Authorization": f"Bearer {token}"}, json=payload)
+```
+
+The analyzer result can be downloaded using this request:
+
+```python
+requests.get(f"{root}/api/object/{workflow_id}?view_analyzer=true", headers={"Authorization": f"Bearer {token}"})
+```
+
+This API will give you a download URL when the analyzer is done.
