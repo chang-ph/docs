@@ -3,4 +3,83 @@ title: "Introduction"
 ---
 # Invoke
 
-APIs used to invoke CloudFunction or run workflow.
+The `/invoke` API can be used to:
+
+1. Run a workflow
+2. Run a cloudfunction
+
+It takes this JSON payload:
+
+```json5
+{
+    "target": "string",
+    "action": "string",
+    "get_response": boolean,
+    "parameters": object
+}
+```
+
+The `target` parameter has two kinds of values:
+
+- Cloud Function ID (e.g. `MARVIZPLOT`). In this case, the `action` parameter
+  must be `run`. The content in `parameters` is defined by the specific Cloud
+  Function.
+- Workflow ID (e.g. `F46FF98D7`). In this case, the `action` parameter must be
+  `run_sample` or `run_analyze`, and `parameters` should be empty or ignored.
+
+The `get_response` parameter is used to indicate whether to synchronously and
+wait for the response from the command. If set to `true`, the API will wait for
+the command to finish and return the response. If set to `false`, the API will
+return immediately after the command is started.
+
+The return format is also defined by the specific Cloud Function.
+
+Example:
+
+1. Arivz plot in serverside
+
+```json5
+// curl -H "Authorization: Bearer $token" "$root/invoke" --json \\
+{
+    "target": "MARVIZPLOT",
+    "action": "run",
+    "get_response": true,
+    "parameters": {
+        "experiment_id": "X7CED97DD",
+        "return_type": "json",
+        "plot_func": "plot_ecdf",
+        "plot_chain": "chain#1",
+        "plot_var": "σ/val"
+    }
+}
+
+// OUTPUT
+{"status": "ok", "data": {"cloudfunction_response": {<plotdata>}}}
+```
+
+2. Run sample
+```json5
+// curl -H "Authorization: Bearer $token" "$root/invoke" --json \\
+{
+    "target": "F46FF98D7",
+    "action": "run_sample",
+    "get_response": true
+}
+
+// OUTPUT
+{"status": "ok", "data": {"experiment_id": "XFF2F7F8B", "experiment_name": "priceless_elion"}}
+```
+
+3. Run Analyze
+
+```json5
+// curl -H "Authorization: Bearer $token" "$root/invoke" --json \\
+{
+    "target": "F46FF98D7",
+    "action": "run_analyze",
+    "get_response": false
+}
+
+// OUTPUT
+{"status": "ok", "data": {}}
+```

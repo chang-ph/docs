@@ -3,4 +3,36 @@ title: "Introduction"
 ---
 # Notification
 
-APIs related to notification.
+You can view and manage server notifications using the notification API.
+
+## 1. get notifications
+
+### API
+
+`GET /notification`
+
+Get the notifications for current user. Support pagination and status filter.
+
+```python
+requests.get(
+    f"{root}/notification",
+    params={"page_no": 1, "page_size": 10, "status": "unread"},
+    headers={"Authorization": f"Bearer {token}"}
+)
+```
+
+## 2. Mark notification as read/unread
+
+### API
+
+`POST /notification/mark`
+
+Mark the specified notifications as read or unread.
+
+```python
+requests.post(
+    f"{root}/notification/mark",
+    json={"notification_ids": [1, 2, 3], "status": "read"},
+    headers={"Authorization": f"Bearer {token}"}
+)
+```
